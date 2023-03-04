@@ -1,0 +1,501 @@
+text,label_slot,label_intent
+sabah 838'de boston'dan uçmak ve sabah 1110'da denver'a varmak istiyorum,B-arrive_time.period_of_day B-depart_time.time B-fromloc.city_name O O B-arrive_time.period_of_day B-arrive_time.time B-toloc.city_name O O,flight
+bana houston ve las vegas arasındaki tüm gidiş dönüş uçuşları göster,O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-round_trip I-round_trip O O,flight
+united airlines ile denver'dan san francisco'ya bir uçuş hakkında bilgi istiyorum,B-airline_name I-airline_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O O,flight
+on ağustos'ta kalkan ve on iki ağustos'ta dönen dallas ve baltimore arasındaki en ucuz seferleri nelerdir,B-depart_date.day_number B-return_date.month_name O O B-return_date.day_number I-return_date.day_number B-return_date.month_name O B-fromloc.city_name O B-toloc.city_name O B-class_type I-class_type O O,flight
+boston'dan bay area'ya uçuyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O,flight
+tamam bana denver ve atlanta arasındaki uçuş ücretini söyler misin,O O B-fromloc.city_name O B-toloc.city_name O O O O O,flight
+montreal'den las vegas'a,B-fromloc.city_name B-toloc.city_name I-toloc.city_name,flight
+philadelphia'dan fort worth'a en erken kahvaltı uçuşu nedir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_mod I-flight_mod B-meal_description O O,flight
+pittsburgh'dan baltimore'a 1000 ile 1400 saatleri arasında uçuşlar,B-fromloc.city_name B-toloc.city_name B-depart_time.start_time O B-depart_time.end_time O O O,flight
+boston'dan san francisco'ya kalkan en son uçuş hangisidir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-flight_mod B-flight_mod O O,flight
+ontario'dan florida'ya uçuşlar,B-fromloc.city_name B-toloc.state_name O,flight
+baltimore'dan denver'a bir uçuşun birinci sınıf ücretini bilmek istiyorum,B-fromloc.city_name B-toloc.city_name O O B-class_type I-class_type O O O,airfare
+tamam bu kulağa harika geliyor hadi atlanta'dan yirmi bir nisan sabahı dallas'a tek yön en ucuz biletle gidelim,O O O O O O B-fromloc.city_name B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_time.period_of_day B-toloc.city_name B-round_trip I-round_trip B-cost_relative I-cost_relative O O,flight
+bana atlanta washington dc arasındaki tüm uçuşların fiyatlarını göster,O B-fromloc.city_name B-toloc.city_name B-toloc.state_code O O O O O,airfare
+cincinnati o'hare uçuşları amerikan 718'den sonra kalkıyor,B-fromloc.city_name B-toloc.airport_name O B-airline_name B-depart_time.time B-depart_time.time_relative O,flight
+pittsburgh'dan atlanta'ya bir uçuşla ilgileniyorum,B-fromloc.city_name B-toloc.city_name O O O,flight
+dallas'tan houston'a şubat yirmi iki sabah erkenden bir uçuş rezervasyonu yaptırmak ve yirmi iki akşamı geç dönmekle ilgileniyorum,B-fromloc.city_name B-toloc.city_name B-return_date.month_name B-return_date.day_number I-return_date.day_number B-depart_time.period_of_day B-depart_time.period_of_day O O O O O B-return_date.day_number I-return_date.day_number B-return_time.period_of_day O O O,flight
+dallas fort worth'da bir mola ile oakland'dan denver'a bir uçuş arıyorum,B-stoploc.city_name I-stoploc.city_name I-stoploc.city_name O O O B-fromloc.city_name B-toloc.city_name O O O,flight
+kısıtlama ap68 nedir,O B-restriction_code O,restriction
+philadelphia'da ne tür kara taşımacılığı mevcuttur,B-city_name O O O O O,ground_service
+co kısaltması ne anlama geliyor,B-airline_code O O O O,abbreviation
+önümüzdeki salı günü amerikan san francisco'ya birinci sınıf bir uçuş,B-depart_date.date_relative B-depart_date.day_name O B-airline_name B-toloc.city_name I-toloc.city_name B-class_type I-class_type O O,flight
+lütfen cumaları baltimore'dan san francisco'ya uçuşları listeleyin,O B-depart_date.day_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+cumartesi günü denver'dan philadelphia'ya hangi uçuşlar dönüyor,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O O,flight
+denver'dan san francisco'ya sabah 10'dan önce uçan birleşik havayollarında ne tür uçak kullanılır,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_time.time B-depart_time.time B-depart_time.time_relative O B-airline_name I-airline_name O O O O,flight
+atlanta'dan baltimore'a aktarmasız bir uçuşa ihtiyacım var lütfen akşam 7'de,B-fromloc.city_name B-toloc.city_name B-flight_stop O O O O O B-arrive_time.time B-arrive_time.time,flight
+denver'dan atlanta'ya en ucuz gidiş dönüş uçuşlar nelerdir,B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O,flight
+denver'dan san francisco'ya kıtasal uçuyor mu,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-airline_name O O,flight
+st petersburg'dan charlotte'a öğleden sonra ayrılan aktarmasız bir uçuş istiyorum,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-arrive_time.period_of_day I-arrive_time.period_of_day O B-flight_stop O O O,flight
+kıta havayollarında san francisco'dan pittsburgh'a herhangi bir sınıf hizmeti,B-airline_name I-airline_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O,flight
+bana boston'dan washington'a en ucuz uçuşu bul,O B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative O O,flight
+peki geçen sefer deneyeceğim birleşik havayollarının sabah 10'dan önce denver'dan san francisco'ya ne tür bir uçak uçtuğunu söyle,O O O O B-airline_name I-airline_name B-depart_time.period_of_day B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O O O,aircraft
+bana detroit'ten st petersburg'ye kuzeybatı uçuşlarını göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-airline_name O O,flight
+çarşamba günü pittsburgh'dan atlanta'ya sabah uçuşları,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day O,flight
+salı günü sabah 8'den sonra ve öğlen 12'den önce kalkan san francisco'dan pittsburgh'a birinci sınıf uçuşları göster,B-depart_date.day_name O B-depart_time.period_of_day O B-depart_time.time_relative O B-depart_time.time I-depart_time.time B-depart_time.time_relative O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-class_type I-class_type O O,flight
+washington'a uçmanın en pahalı yolu nedir,B-toloc.city_name O B-cost_relative I-cost_relative O O,flight
+baltimore dallas arası en ucuz tek yön bileti göster,B-fromloc.city_name B-toloc.city_name O B-cost_relative I-cost_relative B-round_trip I-round_trip O O,airfare
+pazartesi günü boston'dan philadelphia'dan boston'a uçuşlar,B-depart_date.day_name I-depart_date.day_name B-toloc.city_name B-fromloc.city_name B-toloc.city_name O,flight
+houston'dan dallas'a gece yarısından önce varan aktarmasız uçuşları listele,B-fromloc.city_name B-toloc.city_name B-arrive_time.period_of_day I-arrive_time.period_of_day B-arrive_time.time_relative O B-flight_stop O O,flight
+baltimore'dan kalkıp minneapolis'te durup seattle'a giden bir uçağa ihtiyacım var,B-fromloc.city_name O B-stoploc.city_name O B-toloc.city_name O O O O O,flight
+philadelphia'dan san francisco'ya lütfen,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O,flight
+dl anlamına gelen havayolu,B-airline_code O O O,airline
+önce ocakta dallas'tan baltimore'a ucuz bir uçuş istiyorum,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name B-flight_mod B-depart_date.day_number O O,flight
+cuma günü san francisco'dan boston'a hangi uçuşlar mevcut,B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+amerikan havayollarında cumartesi ve pazar milwaukee'den phoenix'e uçuşları göster,B-airline_name I-airline_name B-depart_date.day_name O B-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O,flight
+hangi uçuşlar st paul'dan kansas şehrine cuma günü öğle yemeği servisi,O O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name O B-meal_description I-meal_description O,flight
+toronto'dan philadelphia'ya hangi uçuşlar,B-fromloc.city_name B-toloc.city_name O O,flight
+yirmi dokuz haziran öğleden sonra atlanta'dan boston'a hangi uçaklar kalkıyor,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O O,flight
+hangi uçuşlar san jose için la guardia'dan ayrılıyor ve 2200'ye varıyor,O O B-toloc.city_name I-toloc.city_name O B-fromloc.airport_name I-fromloc.airport_name O O B-arrive_time.time O,flight
+tüm havaalanlarına toplam uçuş sayısını deltaya göre listeleyin,O O O O O B-airline_name O O,quantity
+bana öğleden sonra atlanta'dan boston'a bir uçuşun ne zaman kalkacağını söyleyebilir misin,O B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O O B-flight_time O O O,flight_time
+on dördüncü haziranda denver'dan baltimore'a giden birleşik havayolları uçuşlarını göster,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O B-airline_name I-airline_name O O,flight
+lütfen pazartesi günü dallas'tan philadelphia'ya olan tüm uçuşları listeleyin,O B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O O O,flight
+bana cleveland memphis uçuşlarını göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+lütfen bana çarşamba ve perşembe günleri atlanta'dan boston'a uçak bileti ver,O O B-depart_date.day_name O B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O O,flight
+bana pazartesi sabahı philadelphia'da kara ulaşımını göster,O B-day_name B-period_of_day B-city_name O O O,ground_service
+hangi delta atlanta için boston'dan ayrılıyor,O B-airline_name B-toloc.city_name O B-fromloc.city_name O,flight
+bana en erken boston kalkışını ve en son atlanta dönüş yolculuğunu bul böylece atlanta'da maksimum süre boyunca yerde kalabilir ve aynı gün boston'a dönebilirim,O B-flight_mod I-flight_mod B-toloc.city_name O O B-flight_mod B-flight_mod B-toloc.city_name O O O O B-toloc.city_name O O O O O O O B-return_date.date_relative B-toloc.city_name O,flight
+bana boston'dan washington'a on beş temmuz'dan kalkan uçuşları göster,O B-fromloc.city_name B-toloc.city_name B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name O O O,flight
+sabah en erken philadelphia'dan amerikan havayolları'ndan washington'a uçuşunuzun saatini istiyorum,B-depart_time.period_of_day B-flight_mod I-flight_mod B-fromloc.city_name B-airline_name I-airline_name B-toloc.city_name O B-flight_time O,flight_time
+bana baltimore boston uçuşlarını göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+lütfen cuma geceleri baltimore'dan san francisco'ya uçuş programını listeleyin,O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_time I-flight_time O,flight_time
+philadelphia havaalanından philadelphia şehir merkezine yolculuk ne kadar sürer,B-fromloc.airport_name I-fromloc.airport_name B-toloc.city_name O O O O O O,distance
+yedi temmuz'da hangi uçakların boston'dan ayrılıp yedi temmuz'da atlanta'ya varacağını belirlemek istiyorum,B-arrive_date.day_number B-arrive_date.month_name O O B-fromloc.city_name O B-arrive_date.day_number B-arrive_date.month_name B-toloc.city_name O O O,aircraft
+baltimore'dan philadelphia'ya,B-fromloc.city_name B-toloc.city_name,flight
+atlanta philadelphia uçuşları ve fiyatları nelerdir,B-fromloc.city_name B-toloc.city_name O O O O,flight+airfare
+united havayolları uçuşları denver'da duran,B-airline_name I-airline_name O B-stoploc.city_name O,flight
+çarşamba öğleden sonra denver'dan san francisco'ya hangi uçuşlar mevcut,B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+denver'dan philadelphia'ya gidiş dönüş 1000 doların altında,B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip B-fare_amount I-fare_amount B-cost_relative,airfare
+baltimore'dan denver'a birinci sınıf uçuşları listele,B-fromloc.city_name B-toloc.city_name B-class_type I-class_type O O,flight
+newark'tan la'ye pazartesi ve çarşambaya ücretler ne kadar,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name O B-depart_date.day_name O O O,airfare
+chicago kansas city arası hangi uçuşlar,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+lütfen pazartesi dallas'tan atlanta'ya uçuşları göster,O B-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O,flight
+baltimore'a uçuşlar,B-toloc.city_name O,flight
+bana aşk alanına en son uçuşu göster,O B-toloc.airport_name I-toloc.airport_name B-flight_mod B-flight_mod O O,flight
+delta'nın gece uçuşlarının kaç tanesi birinci sınıf,B-airline_name B-depart_time.period_of_day O O O B-class_type I-class_type,quantity
+birleşik havayollarında bana boston'dan dallas'a uçuş saatlerini ver,B-airline_name I-airline_name O B-fromloc.city_name B-toloc.city_name B-flight_time I-flight_time O,flight_time
+bana çarşamba sabahı philadelphia'daki kara ulaşım programını göster,O B-day_name B-period_of_day B-city_name O O O O,ground_service
+boston'dan atlanta'ya son uçuş nedir,B-fromloc.city_name B-toloc.city_name B-flight_mod O O,flight
+pazartesi salı çarşamba perşembe ve cuma günleri denver'dan san francisco'ya hangi uçuşlar var,B-depart_date.day_name B-depart_date.day_name B-depart_date.day_name B-depart_date.day_name O B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+bana boston'dan philadelphia'ya uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+ayrıca çarşamba akşamı dallas'tan san francisco'ya gitmem gerekiyor,O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+kansas şehrinden deltadaki salt lake city'e yarın saat 2000 civarında varış,B-fromloc.city_name I-fromloc.city_name B-airline_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-arrive_date.today_relative O B-arrive_time.time B-arrive_time.time_relative O,flight
+new york'ta araba kiralamam gerekecek,B-city_name I-city_name B-transport_type O O,ground_service
+bana perşembe günü denver'dan boston'a uçuşları göster,O B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O,flight
+sekiz nisanda charlotte'tan baltimore'a bir uçuş rezervasyonu yaptırmak istiyorum,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O O O O O,flight
+yirmi birinci ocak 1992'de oakland'dan san francisco'ya uçuşlar,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_date.year B-fromloc.city_name B-toloc.city_name I-toloc.city_name O,flight
+dallas fort worth uluslararası havaalanı ve dallas arasındaki bir limuzin ne kadar,B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-toloc.city_name O O B-transport_type O O,ground_fare
+boston'dan san francisco'ya dallas fort worth mola veren bir uçuş var mı,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-stoploc.city_name I-stoploc.city_name I-stoploc.city_name O O O O O O,flight
+baltimore san francisco uçuşları ne zaman,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O B-flight_time,flight_time
+las vegas'tan anka kuşuna sabah kalkıyor,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_time.period_of_day O,flight
+bir boeing 737 kaç yolcu alabilir,O O B-aircraft_code O O O,capacity
+philadelphia'dan dallas'a cuma günü kalkan ve atlanta'da mola veren bir uçak istiyorum,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name O O O B-stoploc.city_name O O O O O,flight
+bu bilgi için teşekkür ederim şimdi on altı nisanda atlanta'dan philadelphia'ya sabah erkenden bir uçuş hakkında bilgi almak istiyorum,O O O O O O B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day B-depart_time.period_mod O O O O O O,flight
+washington'dan san francisco'ya son uçuş ne zaman,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_mod O O B-flight_time,flight_time
+bana pazar günü öğlen 12'den sonra miami'den kalkan ve cleveland'a varan en ucuz uçuşu göster,O B-depart_date.day_name O B-depart_time.time I-depart_time.time B-depart_time.time_relative B-fromloc.city_name O O B-toloc.city_name O B-cost_relative I-cost_relative O O,flight
+yarın sabah pittsburgh'dan atlanta'ya ne var,B-depart_date.today_relative B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O,flight
+denver'den pittsburgh'a en ucuz uçak bileti ne kadar,B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative O O O O,airfare
+yirmi ağustos salı günü pittsburgh'dan atlanta'ya seyahat etmek için en ucuz tek yön bilet ücreti nedir,B-depart_date.day_number B-depart_date.month_name B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O O B-cost_relative I-cost_relative B-round_trip I-round_trip O O O,airfare
+bana denver'den san diego'ya 1700'den sonra kalkan uçuşları göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_time.time B-depart_time.time_relative O O O,flight
+dallas'tan san francisco'ya giden günün en son birinci sınıf uçuşu nedir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O B-flight_mod B-flight_mod B-class_type I-class_type O O,flight
+bana üç ağustostaki pittsburgh baltimore uçuşlarının listesini göster,O B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O O O,flight
+san francisco'dan pittsburgh'a sabah uçuşlarını göster,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day O O,flight
+memphis tacoma uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name O O,flight
+st petersburg ve charlotte arasındaki öğleden sonra hareket eden ve saat 1700'den kısa bir süre sonra varan tüm aktarmasız uçuşları listeleyebilir misiniz,B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-arrive_time.period_of_day B-arrive_time.time_relative O O O O B-arrive_time.time O O O B-arrive_time.time_relative O O B-flight_stop O O O,flight
+ilk eylül 1991 için denver'dan san francisco'ya tüm birleşik uçuşları göster,B-depart_date.day_number B-depart_date.month_name B-depart_date.year O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-depart_date.day_number O O,flight
+pittsburgh ve boston arasında çarşamba sabahı uçuş var mı,B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day O O O,flight
+cumartesi günü milwaukee'den phoenix'e tüm amerikan havayollarını listele,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O B-airline_name I-airline_name O,flight
+bana indianapolis'ten orlando'ya olan yirmi yedinci aralıktaki uçuşları ver,O B-fromloc.city_name B-toloc.city_name O B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name O O,flight
+tamam tamam atlanta'dan washington'a birleşik havayolları ile bir uçuşunuz var mı,O O B-fromloc.city_name B-toloc.city_name B-airline_name I-airline_name O O O O O,flight
+denver'dan oakland'a saat 12 1 arasında gelen uçuşları göster,B-fromloc.city_name B-toloc.city_name B-arrive_time.end_time I-arrive_time.end_time I-arrive_time.end_time O O O O,flight
+pazar günleri tampa'dan charlotte'a tüm aktarmasız uçuşları listele,B-arrive_date.day_name O B-fromloc.city_name B-toloc.city_name O B-flight_stop O O,flight
+boston'dan atlanta'ya tek yönlü bir uçuş yapmak istiyorum,B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O O O,flight
+öğleden sonra philadelphia'dan akşamüstü denver'a varan bir uçuş var mı,B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name B-arrive_time.period_of_day B-toloc.city_name O O O O O,flight
+atlanta'dan baltimore'a öğle yemeği servisi yapan ilk uçuş hangisidir,B-fromloc.city_name B-toloc.city_name B-meal_description I-meal_description O O B-flight_mod O O,flight
+oakland ve denver arasındaki uçuşları listele,B-fromloc.city_name O B-toloc.city_name O O O,flight
+lütfen bana sabah 10'dan önce boston'dan atlanta'ya bir uçuş verin,O O B-depart_time.period_of_day B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name O O O,flight
+salı sabahı erken saatlerde dallas'tan atlanta'ya aktarmasız uçuşları listele,B-arrive_date.day_name B-arrive_time.period_of_day B-arrive_time.period_mod O B-fromloc.city_name B-toloc.city_name B-flight_stop O O,flight
+denver'dan pittsburgh'a en düşük gidiş dönüş ücreti ne kadar,B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O O,airfare
+lütfen benim için denver'dan san francisco'ya us air bir uçuş ayarla,O O O B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-airline_name I-airline_name O O O,flight
+pazartesi günü saat 12'den sonra san francisco'dan pittsburgh'a kalkan uçuşlar için bilgi görmek istiyorum,B-depart_date.day_name I-depart_date.day_name O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O O O,flight
+öğleden önce kalkan ve kahvaltı servisi yapan çarşamba günü pittsburgh'dan atlanta'ya en ucuz uçuşu göster,B-depart_time.time B-depart_time.time_relative O O B-meal_description O O B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative O O,flight
+washington'dan san francisco'ya en erken uçuş ne zaman,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_mod I-flight_mod O O O,flight
+perşembe günü saat 1700'den sonra kalkan pittsburgh'dan los angeles'a uçuşları listele,B-depart_date.day_name O O B-depart_time.time B-depart_time.time_relative O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+new york'tan miami'ye salı günü kesintisiz olan ve maliyeti 466 dolardan az olan uçuşları listeleyin,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_name O B-flight_stop O O O B-fare_amount I-fare_amount B-cost_relative O O O,flight
+denver san francisco no denver philadelphia uçuşlarını listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-fromloc.city_name B-toloc.city_name O O,flight
+cuma günü boston'dan san francisco'ya bir uçak bulmam gerek,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O,aircraft
+lax ne anlama geliyor,B-airport_code O O O,abbreviation
+yirmi dokuz temmuz baltimore dallas arası tüm uçuşlar için fiyatları göster,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O O O O O O,airfare
+pazartesi akşamı geç veya salı sabahı erken saatlerde boston'dan washington'a hangi uçuşlar var,B-depart_date.day_name B-depart_time.period_of_day B-depart_time.period_mod B-or B-depart_date.day_name B-depart_time.period_of_day B-depart_time.period_mod O B-fromloc.city_name B-toloc.city_name O O O,flight
+washington dc'den toronto'ya hangi uçuşlar,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name O O,flight
+boston'dan washington dc'ye tüm uçuşlar onbir kasım saat 1000'dan önce,B-fromloc.city_name B-toloc.city_name B-toloc.state_code O O B-depart_date.day_number B-depart_date.month_name B-depart_time.time B-depart_time.time B-depart_time.time_relative,flight
+denver'dan philadelphia'ya tüm uçuşları listele,B-fromloc.city_name B-toloc.city_name O O O,flight
+st louis'den chicago'ya geç öğleden sonra uçuşlarının bir listesine ihtiyacım var,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O B-depart_time.period_of_day I-depart_time.period_of_day O O O O O,flight
+aşk alanına gidiş geliş uçuşları için havayollarını göster,B-fromloc.airport_name I-fromloc.airport_name B-round_trip I-round_trip O O O O,airline
+chicago'dan indianapolis'e uçuşun var mı,B-fromloc.city_name B-toloc.city_name O O O,flight
+yn ne anlama geliyor,B-fare_basis_code O O O,abbreviation
+nashville'den st petersburg'ye en kısa uçuşlar,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_mod I-flight_mod O,flight
+atlanta ile dfw arasındaki uçuşlar için ücretler ne kadar,B-fromloc.city_name O B-toloc.airport_code O O O O O O,airfare
+boston'dan philadelphia'ya midway havayolları uçuşlarının ücretlerini listeleyin,B-fromloc.city_name B-toloc.city_name B-airline_name I-airline_name O O O,airfare
+denver'dan philadelphia'ya gidiş dönüş 1000 doların altında,B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip B-fare_amount I-fare_amount B-cost_relative,airfare
+las vegas'tan new york'a aktarmasız bir kıtasal uçuşu var mı,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_stop O B-airline_name O O O,flight
+denver'dan baltimore'a giden bir biletin fiyatına birleşik havayollarında birinci sınıf bir bilete ihtiyacım var,B-fromloc.city_name B-toloc.city_name O O O O B-airline_name I-airline_name B-class_type I-class_type O O O O,airfare
+perşembe sabahı philadelphia'dan san francisco'ya ücretleri göster,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,airfare
+bana phoenix ve salt lake city arasındaki gidiş dönüş uçuşları göster,O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O B-round_trip I-round_trip O O,flight
+on mayıs'ta denver'dan baltimore'a gelen tüm uçuşları göster,B-arrive_date.day_number B-arrive_date.month_name B-fromloc.city_name B-toloc.city_name O O O O,flight
+boston'dan san francisco'ya en ucuz tek yön bileti bul,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O,airfare
+bana boston'dan san francisco'ya uçuşları göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+lütfen bana boston'dan san francisco'ya uçuşları göster,O O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+bana aşk alanından havayollarını göster,O B-fromloc.airport_name I-fromloc.airport_name O O,airline
+boston'dan toronto'ya us air uçuşlarında business class ücretlerini göster,B-fromloc.city_name B-toloc.city_name B-airline_name I-airline_name O B-class_type I-class_type O O,airfare
+ontario için las vegas'tan kalkan en son uçuş nedir,B-toloc.city_name O B-fromloc.city_name I-fromloc.city_name O B-flight_mod B-flight_mod O O,flight
+las vegas phoenix uçuşları,B-fromloc.city_name B-fromloc.city_name B-toloc.city_name O,flight
+denver'dan philadelphia'ya ua 270 uçuşunda yemek var mı,B-fromloc.city_name B-toloc.city_name B-airline_code B-flight_number B-airline_code B-meal O O,flight
+oakland'dan philadelphia'ya 1700 ile 1800 saatleri arasında hangi aktarmasız uçuşlar mevcuttur,B-fromloc.city_name B-toloc.city_name B-arrive_time.start_time O B-arrive_time.end_time O O O B-flight_stop O O,flight
+bana philadelphia'dan dallas'a amerikan havayolunun uçuşlarını ver,O B-fromloc.city_name B-toloc.city_name B-airline_name I-airline_name O O,flight
+bana çarşamba günleri atlanta'dan washington'a akşam uçuşlarını göster,O B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day O O,flight
+denver'dan atlanta'ya giden bir uçakta en ucuz sınıfında bir koltuk istiyorum,B-fromloc.city_name B-toloc.city_name O O O B-class_type I-class_type I-class_type O O O,flight
+phoenix ve las vegas arasındaki tüm uçuşları listeleyebilir misin,B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O,flight
+delta havayollarında atlanta ve oakland arasındaki qx ücret uçuşlarını göster,B-airline_name I-airline_name B-fromloc.city_name O B-toloc.city_name O B-fare_basis_code I-fare_basis_code O O,flight
+denver ve dallas fort worth arasında hangi öğleden sonra uçuşları mevcuttur,B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O B-depart_time.period_of_day I-depart_time.period_of_day O O,flight
+pittsburgh philadelphia uçak bileti fiyatları,B-fromloc.city_name B-toloc.city_name O O O,airfare
+denver ve san francisco arasında hangi havayolunun uçtuğunu söyleyebilir misin,B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O,airline
+her havayolunun rezervasyon sınıfı k ile kaç uçuşu var,O O O O B-fare_basis_code O B-fare_basis_code O O,quantity
+şimdi öğrenmek istediğim şey yirmi nisanda washington'dan denver'a sabah 5 civarında en ucuz uçak biletiniz var mı,O O O O B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day B-depart_time.time B-depart_time.time_relative B-cost_relative I-cost_relative O O O O,flight
+öğleden önce kalkan san francisco boston arasındaki tüm direkt uçuşları göster,B-depart_time.time B-depart_time.time_relative O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O B-connect O O,flight
+perşembe sabah 8'den önce oakland'dan salt lake city'e uçağa ihtiyacım var,B-depart_date.day_name B-depart_time.time B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O,flight
+bana tüm uçak türlerini göster,O O O O O,aircraft
+boston'dan san francisco'ya kıtasal bir uçuş istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-airline_name O O O,flight
+pittsburgh'dan san francisco'ya uçuşları göster,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+mco hangi şehir,B-airport_code O O,city
+amerikan havayolları kaç şehre birinci sınıf uçuşlarla hizmet veriyor,B-airline_name I-airline_name O O B-class_type I-class_type O O O,quantity
+lütfen bana charlotte'den milwaukee'ye tüm uçuşları gösterebilir misin,O O B-fromloc.city_name B-toloc.city_name O O O O,flight
+hangi uçuşlar san francisco'dan 1600'dan sonra kalkıyor ve indianapolis üzerinden washington'a uçuyor,O O B-fromloc.city_name I-fromloc.city_name B-depart_time.time B-depart_time.time_relative O O B-stoploc.city_name O B-toloc.city_name O,flight
+denver'dan philadelphia'ya uçuşları görmek istiyorum,B-fromloc.city_name B-toloc.city_name O O O,flight
+bana houston üzerinden san diego'dan newark new jersey'e giden uçuşları göster,O B-stoploc.city_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-toloc.state_name I-toloc.state_name O O O,flight
+çarşamba öğleden sonra denver'dan san francisco'ya uçuşlar hakkında bilgi istiyorum,B-depart_date.day_name B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O,flight
+bana boston pittsburgh uçuşlarını göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+bana san diego new york arasındaki aktarmasız tüm uçuşları göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-flight_stop O O O,flight
+bana baltimore'dan atlanta'ya gidiş dönüş biletlerini göster,O B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O,airfare
+bana san diego miami arası en ucuz tek yön biletlerini göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O B-cost_relative I-cost_relative B-round_trip I-round_trip O O,airfare
+bana phoenix'den denver'a hafta içi tüm uçuşları gösterebilir misin,O B-fromloc.city_name B-toloc.city_name B-flight_mod I-flight_mod O O O O,flight
+önümüzdeki perşembe boston'dan philadelphia'ya uçmak istiyorum,B-depart_date.date_relative B-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O,flight
+pittsburgh'a bir gezi planlıyorum ve denver'da yaşıyorum bana yardım edebilir misin,B-toloc.city_name O O O O B-fromloc.city_name O O O O O,flight
+boston'dan denver'a en ucuz uçuşu bulmak istiyorum,B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative O O O,flight
+salı günü atlanta'dan denver'a gitmek istiyorum,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O,flight
+atlanta'dan pittsburgh'a yirmi üç temmuz,B-fromloc.city_name B-toloc.city_name B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name,flight
+bana boston'dan atlanta'ya uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+burbank'tan denver'a hangi havayolları uçuyor,B-fromloc.city_name B-toloc.city_name O O O,airline
+tamam washington'dan denver birinci sınıf bilete gidiyoruz birinci sınıf bir biletin maliyetini bilmek istiyorum,O B-fromloc.city_name B-toloc.city_name B-class_type I-class_type O O B-class_type I-class_type O O O O O,airfare
+pittsburgh'dan atlanta en ucuz indirimli tarifesine bir uçuş rezervasyonu yapmak istiyorum,B-fromloc.city_name B-toloc.city_name B-class_type I-class_type O O O O O O O,flight
+baltimore'dan san francisco'ya uçmam mümkün mü,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+en az bir durakla denver'dan san francisco'ya uçmak istiyorum,O O B-flight_stop I-flight_stop B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+washington'dan kaç tane us air uçak kalkıyor,B-fromloc.city_name O O B-airline_name I-airline_name O O,quantity
+lütfen salı oakland california'dan ayrılan philadelphia çarşamba varışlı herhangi bir uçuşu listeleyin,O B-depart_date.day_name B-fromloc.city_name B-fromloc.state_name O B-toloc.city_name B-arrive_date.day_name O O O O O,flight
+las vegas'tan detroit michigan'a pazartesi öğleden sonra kalkan bir uçak bulmak istiyorum,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-toloc.state_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day O O O O O,flight
+denver'den pittsburgh'a atlanta'da duraklı uçuş var mı,B-fromloc.city_name B-toloc.city_name B-stoploc.city_name O O O O,flight
+boston'dan philadelphia'ya kesintisiz bilgi almak istiyorum,B-fromloc.city_name B-toloc.city_name B-flight_stop O O O,flight
+pazardan sonra cumartesi günü denver'dan philadelphia'ya öğleden sonra kalkan tüm uçuşları göster,B-depart_date.day_name B-depart_time.time_relative B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name B-depart_time.time B-depart_time.time_relative O O O O,flight
+dallas baltimore uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name O O,flight
+sabah 8 civarında san francisco'dan atlanta'ya uçuşunuz var mı,B-depart_time.time B-depart_time.time B-depart_time.time_relative B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+seattle'dan salt lake city'e hangi uçuşlar,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O,flight
+boston'dan bwi'ye en ucuz uçak bileti,B-fromloc.city_name B-toloc.airport_code B-cost_relative I-cost_relative O O,flight
+new york'tan los angeles'a milwaukee'de aktarmalı uçuş var mı,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-stoploc.city_name O O O O,flight
+pazar günü oakland'dan washington dc'ye en erken uçuş ne zaman,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name B-toloc.state_code B-flight_mod I-flight_mod O O O,flight
+on yedinci aralıkta pittsburgh'dan baltimore'a turboprop uçuşları var mı,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O O O O,flight
+bana boston'dan philadelphia'ya sabah uçuşlarını göster,O B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day O O,flight
+newark'tan cleveland'a günlük,B-fromloc.city_name B-toloc.city_name B-flight_days,flight
+philadelphia'dan oakland'a akşam uçuşları,B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day O,flight
+gelecek yaz baltimore'dan dallas'a birinci sınıf seyahat için fiyatları ve saatleri göster,O O B-fromloc.city_name B-toloc.city_name B-class_type I-class_type O O O O B-flight_time O,airfare
+ne tür bir uçak öğleden sonra boston'dan pittsburgh'a uçar,O O O O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name O,aircraft
+united airlines'ın dallas'tan san francisco'ya hangi uçuşları olduğunu bilmek istiyorum,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O O,flight
+bana toronto'dan sabah uçuşlarını göster,O B-fromloc.city_name B-depart_time.period_of_day O O,flight
+boston havaalanında hangi kara taşımacılığı mevcut,B-airport_name I-airport_name O O O O,ground_service
+boston oakland uçuşları nerede durur,B-fromloc.city_name B-toloc.city_name O O B-flight_stop,airport
+bana boston'dan san francisco'ya en erken uçuşu göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_mod I-flight_mod O O,flight
+la guardia veya jfk'den cleveland'a uçuşlar,B-fromloc.airport_name I-fromloc.airport_name B-or B-fromloc.airport_code B-toloc.city_name O,flight
+boston'dan san francisco'ya en ucuz tek yön bileti bul,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O,airfare
+washington dc'den denver'a uçuşlar nelerdir,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name O O,flight
+bana çarşamba günü saat 1600'dan sonra ve perşembe günü saat 9'dan önce atlanta'dan washington dc'ye uçuşlar hakkında bilgi verin,O B-depart_date.day_name I-depart_date.day_name O B-depart_time.time B-depart_time.time_relative O B-depart_date.day_name I-depart_date.day_name O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name B-toloc.state_code O O O O,flight
+baltimore ve washington dc arasındaki uçuşlar,B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O O,flight
+philadelphia'dan san francisco'ya uçuşları hangi ücret kodları kapsıyor,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O O,abbreviation
+boston'dan oakland'a duraklı giden herhangi bir uçuş var mı,B-fromloc.city_name B-toloc.city_name B-flight_stop O O O O O O,flight
+denver'dan philadelphia'ya hareket saatlerini saat 10'dan sonra ve öğleden sonra 2'den önce listeleyin,B-fromloc.city_name B-toloc.city_name B-flight_time I-flight_time B-depart_time.time I-depart_time.time I-depart_time.time O B-depart_time.time I-depart_time.time I-depart_time.time B-depart_time.time_relative O,flight_time
+boston'dan philadelphia'ya sabah 630'dan önce kalkan uçuşları olan herhangi bir havayolu var mı,B-fromloc.city_name B-toloc.city_name B-depart_time.time I-depart_time.time B-depart_time.time_relative O O O O O O O O,airline
+united'ın bugün kaç tane birinci sınıf uçuşu var,B-airline_name B-depart_date.today_relative O O B-class_type I-class_type O O,quantity
+lütfen bana salı günü san francisco'dan pittsburgh'a uçuşları göster,O O B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+miami'deyim ve pazar günü las vegas'a seyahat etmek istiyorum,B-fromloc.city_name O B-depart_date.day_name O B-toloc.city_name I-toloc.city_name O O O,flight
+bana denver'dan philadelphia'ya uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+akşam mümkün olan en geç saatte pittsburgh'dan atlanta'ya us air uçmak istiyorum,B-depart_time.period_of_day B-flight_mod I-flight_mod I-flight_mod I-flight_mod O B-fromloc.city_name B-toloc.city_name B-airline_name I-airline_name O O,flight
+bana pazartesi günü saat 8'den sonra kalkan tüm dallas pittsburgh uçuşlarını göster,O B-depart_date.day_name I-depart_date.day_name B-depart_time.time I-depart_time.time B-depart_time.time_relative O O B-fromloc.city_name B-toloc.city_name O O,flight
+denver'dan kalkan aktarmasız uçuşlar yedi temmuz'da baltimore'a varıyor mu,B-fromloc.city_name O B-flight_stop O B-arrive_date.day_number B-arrive_date.month_name B-toloc.city_name O O,flight
+twa kullanarak boston ve oakland arasındaki gidiş dönüş uçuşları listeleyin,B-airline_code O B-fromloc.city_name O B-toloc.city_name O B-round_trip I-round_trip O O,flight
+oakland'dan washington dc'ye pazar uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name B-toloc.state_code B-depart_date.day_name O O,flight
+pazar günü seattle'dan minneapolis'e hangi uçuşlar var,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O O,flight
+cumartesi günü las vegas'tan montreal'e hangi uçuşlar,B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+kıtasal 271'de dallas'tan san francisco'ya uçuş ücreti nedir,B-airline_name B-flight_number B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,airfare
+perşembe denver washington dc uçuşlarını göster,B-depart_date.day_name B-fromloc.city_name B-toloc.city_name B-toloc.state_code O O,flight
+philadelphia havaalanında ne tür kara taşımacılığı mevcuttur,B-airport_name I-airport_name O O O O O,ground_service
+çarşamba akşamı phoenix'den milwaukee'ye uçuşlar,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O,flight
+bana aşk alanından son uçuşu göster,O B-fromloc.airport_name I-fromloc.airport_name B-flight_mod O O,flight
+orlando'dan kansas city'ye kalkan tüm uçuşları listeleyebilir misin,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O O,flight
+önümüzdeki çarşamba kansas city'den chicago'ya uçmak istiyorum akşam varıyorum ve ertesi gün dönüyorum,B-return_date.date_relative B-depart_date.day_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O B-arrive_time.period_of_day O O B-return_date.date_relative O O,flight
+fort worth şehrinde kara ulaşımı nasıldır,B-city_name I-city_name O O O O,ground_service
+baltimore'dan seattle'a minneapolis'te duran bir uçağa ihtiyacım var,B-fromloc.city_name B-toloc.city_name B-stoploc.city_name O O O O O,flight
+dallas'tan philadelphia'ya en son hangi uçuşunuz var,B-fromloc.city_name B-toloc.city_name B-flight_mod B-flight_mod O O O,flight
+bana atlanta'dan philadelphia'ya uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+bana diğer havaalanlarından aşk alanına gelen uçuşları göster,O O O B-toloc.airport_name I-toloc.airport_name O O O,flight
+ewr ne anlama geliyor,B-airport_code O O O,abbreviation
+denver'dan salt lake city'e hangi uçuşlar var,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O,flight
+lütfen bana yirminci eylülün philadelphia'dan san francisco'ya united airlines'ın sabah uçuş saatlerini ver,O O B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-airline_name I-airline_name B-depart_time.period_of_day B-flight_time I-flight_time O,flight_time
+toronto'dan bir uçuşun tuz gölü şehrine en erken varış zamanı nedir,B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name I-toloc.city_name B-flight_mod I-flight_mod O O O,flight
+boston'dan philadelphia'ya tüm uçuşları görmek istiyorum,B-fromloc.city_name B-toloc.city_name O O O O,flight
+ücret kodu c nedir,B-fare_basis_code O B-fare_basis_code O,abbreviation
+delta ne tür bir uçak ağustos iki sabahı 8'den önce boston'dan denver'a uçuyor,B-airline_name O O O O B-depart_date.month_name B-depart_date.day_number O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name O,aircraft
+öğleden sonra denver'dan san francisco'ya uçuş,B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name O,flight
+bostondan stapleton havaalanına yarınki ilk uçuş ne zaman,B-fromloc.city_name B-toloc.airport_name I-toloc.airport_name B-depart_date.today_relative B-flight_mod O O O,flight
+pazar akşamı hangi uçuşların atlanta'dan ayrılıp baltimore'a vardığını bilmem gerekiyor,B-depart_date.day_name B-depart_time.period_of_day O O B-fromloc.city_name O B-toloc.city_name O O O,flight
+milwaukee'den orlando'ya çarşamba günü uçuşlar nelerdir,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name I-depart_date.day_name O O,flight
+denver ve boston arasındaki en ucuz bilet ücreti nedir,B-fromloc.city_name O B-toloc.city_name O B-cost_relative I-cost_relative O O O,airfare
+hangi havayollarının business class'ı var,O O B-class_type I-class_type O,airline
+san francisco'dan pittsburgh'a ve sonra pittsburgh'dan new york'a ve new york'tan san francisco'ya bir uçuşa ihtiyacım var,B-toloc.city_name I-toloc.city_name B-fromloc.city_name O O B-fromloc.city_name B-fromloc.city_name I-fromloc.city_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O,flight
+çarşamba günü saat 1800'den sonra washington'dan ayrılan washington dc ile san francisco arasında hangi uçuşlar var,B-depart_date.day_name I-depart_date.day_name O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name I-toloc.city_name O O O O,flight
+doğu atlanta'dan denver'a saat 1800'den önce ne tür bir uçak uçuyor,B-airline_name B-fromloc.city_name B-toloc.city_name O B-depart_time.time B-depart_time.time_relative O O O O O,aircraft
+boston'dan denver'a çarşamba sabahı saat 9'da veya çarşamba sabahı saat 9 gibi denver'a varan uçuşların uygun olmasını istiyorum,B-fromloc.city_name B-toloc.city_name B-arrive_date.day_name B-arrive_time.period_of_day B-arrive_time.time I-arrive_time.time B-or B-arrive_date.day_name B-arrive_time.period_of_day B-arrive_time.time I-arrive_time.time B-arrive_time.time_relative B-toloc.city_name O O O O O,flight
+baltimore havaalanında hangi kara taşımacılığı mevcut,B-airport_name I-airport_name O O O O,ground_service
+bana atlanta'dan baltimore denver ve dallas'a uçuşları göster,O B-fromloc.city_name B-toloc.city_name B-toloc.city_name O B-toloc.city_name O O,flight
+minneapolis'ten şikago'ya hangi uçuşlar var,B-fromloc.city_name B-toloc.city_name O O O,flight
+perşembe günü denver pittsburgh uçuşları,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O,flight
+yirmi dokuz temmuz boston'dan denver'a giden uçuşların bir listesini alabilir miyim,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O O O O O O,flight
+nashville ile st louis arasında kesintisiz olan ve öğleden sonra ve akşam 8'den önce gelen hangi uçuşlar var,B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-flight_stop O O B-arrive_time.time B-arrive_time.time_relative O B-arrive_time.time I-arrive_time.time B-arrive_time.time_relative O O O O,flight
+lütfen boston pittsburgh uçuş saatlerini listeleyiniz,O B-fromloc.city_name B-toloc.city_name B-flight_time I-flight_time O,flight_time
+oakland'dan salt lake city'e giden uçuş,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O,flight
+bir havayolunun sunduğu farklı sınıflar nelerdir,O O O O O O,flight
+boston havaalanı ile boston şehir merkezi arasında kara ulaşımı olup olmadığını söyleyebilir misiniz,B-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name O O O O O O O O O,ground_service
+denver kara taşımacılığı,B-city_name O O,ground_service
+atlanta dallas gündüz uçak bileti fiyatları ne kadar,B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day O O O O O,airfare
+boston atlanta arası uçakla kaç saat sürer,B-fromloc.city_name B-toloc.city_name O O O O O,distance
+lütfen amerikan havayollarında san jose'den dallas'a cuma öğleden sonra uçuşlarını listeleyin,O B-airline_name I-airline_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day O O,flight
+akşam saatlerinde dallas'tan san francisco'ya amerikan havayolları uçuşu var mı,B-depart_time.period_of_day O B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-airline_name I-airline_name O O O,flight
+denver'da hangi kara taşımacılığı mevcuttur,B-city_name O O O O,ground_service
+bana dallas san francisco arası ücretleri göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,airfare
+pittsburgh'da araba kiralamak istiyorum,B-city_name B-transport_type O O,ground_service
+tampa'dan montreal'e giden ve new york'ta mola veren bir uçak ve öğle yemeği servisi yapan bir uçak bulmak istiyorum,B-fromloc.city_name B-toloc.city_name O O B-stoploc.city_name I-stoploc.city_name O O O O O B-meal_description I-meal_description O O O O O O,flight
+lütfen bana çarşamba öğleden sonra ve perşembe sabahı atlanta'dan boston'a uçuşlar verin,O O B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O,flight
+st louis'den kalkan ve milwaukee'ye varan tüm uçuşları listeleyebilir misiniz,B-fromloc.city_name I-fromloc.city_name O O B-toloc.city_name O O O O O,flight
+montreal las vegas uçuşları,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O,flight
+cumartesi sabahı chicago'dan seattle'a uçuşları ver,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O,flight
+havayolu nw nedir,O B-airline_code O,airline
+bu gece charlotte'tan las vegas'a st louis'de duracak bir uçağa ihtiyacım var ve ben akşam yemeği istiyorum,B-depart_date.today_relative I-depart_date.today_relative B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-stoploc.city_name I-stoploc.city_name O O O O O O O B-meal_description I-meal_description O,flight
+denver'dan önümüzdeki pazartesi pittsburgh'a en son ne zaman varacak,B-fromloc.city_name B-arrive_date.date_relative B-arrive_date.day_name B-toloc.city_name B-flight_mod B-flight_mod O O O,flight
+lütfen general mitchell uluslararası havalimanı'na inen ve kalkan uçuşları listeleyiniz,O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O O O O,flight
+boston'da hangi limuzin servisi var,B-city_name O B-transport_type O O,ground_service
+y ücret kodu ne demek,B-fare_basis_code O O O O,abbreviation
+denver'dan kalkan delta uçuşları var mı,B-fromloc.city_name O B-airline_name O O O,flight
+perşembe günü st petersburg'dan miami'ye bir uçuş istiyorum,B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+uçaklar ne zaman boston'dan ayrılıyor,O O O B-fromloc.city_name O,flight
+çarşamba sabahı atlanta'dan philadelphia'ya hangi uçuşlar var,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O O,flight
+bana san francisco'dan boston philadelphia veya baltimore'a tüm uçuşları göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-toloc.city_name O B-toloc.city_name O O O,flight
+sabah philadelphia'dan dallas'a ilk uçuşta ne tür bir uçak kullanılıyor,B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name B-flight_mod O O O B-flight_mod O O,aircraft
+pittsburgh oakland uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name O O,flight
+atlanta'dan boston'a 124 dolara sabah uçuşlarını listele,B-fromloc.city_name B-toloc.city_name B-fare_amount I-fare_amount B-depart_time.period_of_day O O,flight
+miami'den new york'a tüm uçuşlar,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+denver oakland uçuşlarını göster,B-fromloc.city_name B-toloc.city_name O O,flight
+philadelphia'dan san francisco'ya uçuşları göster,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+yarın geç saatte nashville'den houston'a akşam yemeği ile bir uçuş istiyorum lütfen,B-depart_date.today_relative B-depart_time.period_mod O B-fromloc.city_name B-toloc.city_name B-meal_description I-meal_description O O O O O,flight
+baltimore'dan dallas'a tüm ekonomi fiyatlarını göster,B-fromloc.city_name B-toloc.city_name O B-economy O O,airfare
+montreal quebec'ten san diego california'ya bu pazar hareket eden bir uçağa ihtiyacım var,B-fromloc.city_name B-fromloc.state_name B-toloc.city_name I-toloc.city_name B-toloc.state_name B-depart_date.date_relative B-depart_date.day_name O O O O O O,flight
+bana san francisco'dan boston'a saat 2100'den sonra san francisco'dan ayrılan en ucuz tek yön uçuşu göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_time.time I-depart_time.time B-depart_time.time_relative B-fromloc.city_name I-fromloc.city_name O B-cost_relative I-cost_relative B-round_trip I-round_trip O O,flight
+birleşik havayollarının boston ve denver arasında uçuşları var mı,B-airline_name I-airline_name B-fromloc.city_name O B-toloc.city_name O O O O,flight
+akşam geç saatlerde orlando'dan cleveland'a us air yoluyla uçmak istiyorum,B-depart_time.period_of_day B-depart_time.period_mod O B-fromloc.city_name B-toloc.city_name B-airline_name I-airline_name O O O,flight
+milwaukee'den orlando'ya çarşamba gecesi uçuşlar nelerdir,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O O,flight
+bana newark'tan los angeles'a uçuşları göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+bana çarşamba akşamı washington'dan atlanta'ya akşam uçuşunu tekrar verebilir misin,O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day O O O O,flight
+la charlotte pazartesi sabahı uçak biletleri ve fiyatları nelerdir,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O O O B-fromloc.city_name O,flight
+yirmi beş temmuz 1991'de denver'dan baltimore'a hangi birinci sınıf uçuşlar mevcut,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_date.year B-fromloc.city_name B-toloc.city_name O B-class_type I-class_type O O,flight
+pittsburgh'dan baltimore'a yarın yemek servisi yapılan tüm uçuşları göster,B-fromloc.city_name B-toloc.city_name B-depart_date.today_relative B-meal O O O O O,flight
+philadelphia ile denver arasındaki tüm uçuşları göster,B-fromloc.city_name O B-toloc.city_name O O O O,flight
+phoenix newark uçuşları,B-fromloc.city_name B-toloc.city_name O,flight
+pittsburgh'dan dallas'a tüm uçuşlar saat 12'den sonra 100'den az gidiş dönüş,B-fromloc.city_name B-toloc.city_name O O O B-depart_time.time B-depart_time.time_relative B-fare_amount B-cost_relative B-round_trip I-round_trip,flight
+teşekkürler ve washington'dan boston'a son uçuş ne zaman,O O B-fromloc.city_name B-toloc.city_name B-flight_mod O O O,flight
+bana boston'dan baltimore'a uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+ücret kodu q ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+philadelphia'dan baltimore'a saat 4 civarı varan uçakları göster,B-fromloc.city_name B-toloc.city_name B-arrive_time.time I-arrive_time.time B-arrive_time.time_relative O O O,flight
+herhangi bir sınıfta baltimore'dan dallas'a en ucuz uçak bileti nedir,O O O B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative O O O,airfare
+bana new york'tan vegas'a bir pazar günü gelen tüm duraksızları ver,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O B-arrive_date.day_name O O O B-flight_stop O,flight
+sa nedir,B-days_code O,abbreviation
+bana boston'dan san francisco'ya uçuşları göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+ücret kodu qo ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+dallas'tan kalkan boston'a varan dallas'tan sabah erken kalkan uçuşlar hakkında bilgiye ihtiyacım var,B-fromloc.city_name O B-toloc.city_name O B-fromloc.city_name B-depart_time.period_of_day B-depart_time.period_mod O O O O O O,flight
+perşembe günü atlanta'dan washington dc'ye en erken uçuş ne zaman,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name B-toloc.state_code B-flight_mod I-flight_mod O O O,flight
+cumartesi günü dallas'tan san francisco'ya hangi uçuşlar mevcut,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+boston'dan san francisco'ya uçmak istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+amerikan havayollarının boston'dan atlanta'ya kaç uçuşu var,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name O O O,quantity
+midwest ekspresinin montreal'den nashville'e uçuşu var mı,B-airline_name O B-fromloc.city_name B-toloc.city_name O O O,flight
+dallas'tan baltimore'a kadar tüm ekonomi fiyatlarını göster,B-fromloc.city_name B-toloc.city_name O O B-economy O O,airfare
+ve boston havaalanından şehir merkezine seyahat etmenin maliyeti nedir,O B-fromloc.airport_name I-fromloc.airport_name O O O O O O,airfare
+saat 1000'dan önceki tüm uçuşlar boston denver,B-depart_time.time B-depart_time.time B-depart_time.time_relative O O B-fromloc.city_name B-fromloc.city_name,flight
+bana houston'da tek durakla san diego'dan newark'a giden uçuşları göster,O B-stoploc.city_name B-flight_stop I-flight_stop B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+bana çarşamba günü baltimore'dan newark'a en erken uçuşu göster,O B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name B-flight_mod I-flight_mod O O,flight
+yirmi temmuz'da pittsburgh'dan atlanta'ya en ucuz tek yön uçuşu rezerve etmek istiyorum,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O O O,flight
+mco ne anlama geliyor,B-airport_code O O O,abbreviation
+bana charlotte cleveland arasındaki tüm uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O O O,flight
+salt lake city'den st petersburg'ye uçuşunuz var mı,B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+boston'dan atlanta'ya en erken uçuş ne zaman,B-fromloc.city_name B-toloc.city_name B-flight_mod I-flight_mod O O O,flight
+yarın sabah kansas city'den newark'a bir uçuş istiyorum,B-depart_date.today_relative B-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+bana boston'dan detroit'e tüm uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O O,flight
+bana on beş haziranda baltimore'a varan denver veya dallas'tan kalkan uçakları göster,O B-arrive_date.day_number I-arrive_date.day_number B-arrive_date.month_name B-toloc.city_name O B-fromloc.city_name B-or B-fromloc.city_name O O O,flight
+bana aşk alanından diğer havalimanlarına uçuşları göster,O B-fromloc.airport_name I-fromloc.airport_name O O O O,flight
+baltimore'dan boston'a alabileceğim en erken uçuş nedir,B-fromloc.city_name B-toloc.city_name O B-flight_mod I-flight_mod O O,flight
+boston'dan san francisco'ya us air tasarruflu gidiş dönüş uçak bileti ücreti nedir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-airline_name I-airline_name B-class_type B-round_trip I-round_trip O O O O,airfare
+pazartesi akşamı los angeles'tan pittsburgh'a uçuşları göster,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+atlanta'dan denver'a bir uçuş istiyorum,B-fromloc.city_name B-toloc.city_name O O O,flight
+bana memphis'ten charlotte'a tüm uçuşları ver,O B-fromloc.city_name B-toloc.city_name O O O,flight
+philadelphia'dan toronto'ya,B-fromloc.city_name B-toloc.city_name,flight
+newark'tan cleveland'a,B-fromloc.city_name B-toloc.city_name,flight
+çarşamba günü anka kuşundan kalkan ve milwaukee'de duran tüm amerikan havayolu uçuşlarını listeleyin,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name I-fromloc.city_name O O B-stoploc.city_name O O B-airline_name I-airline_name O O,flight
+yarın pittsburgh baltimore arasındaki tüm uçuşları göster,B-depart_date.today_relative B-fromloc.city_name B-toloc.city_name O O O O,flight
+31 ağustos sabahı denver'dan pittsburgh'a aktarmasız direkt uçuş var mı,B-depart_date.day_number B-depart_date.month_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name B-flight_stop B-connect O O O,flight
+hangi hava yolu dört temmuz'da dallas'tan baltimore'a en ucuz bileti sunuyor,O O O B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative O O,airline
+midwest ekspres charlotte servisi yapıyor mu,B-airline_name O B-city_name O O O,flight
+bana philadelphia'dan san francisco'ya tüm uçuşları göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+denver'da kara taşımacılığı,B-city_name O O,ground_service
+boston'dan dallas fort worth'a öğleden önce gelen hem doğrudan hem de aktarmalı tüm uçuşları göster,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-arrive_time.time B-arrive_time.time_relative O O O O O O O O O,flight
+cumartesi günü philadelphia'dan dallas'a uçuşları göster,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O,flight
+ve atlanta'dan oakland'a saat 1700'den sonra kalkan uçuşlar,O B-fromloc.city_name B-toloc.city_name O B-depart_time.time B-depart_time.time_relative O O,flight
+tamam ve dört mayısta erken sabah 8 civarı atlanta'dan denver'a gitmek istiyorum,O O B-depart_date.day_number B-depart_date.month_name B-depart_time.period_mod B-depart_time.period_of_day B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name O O,flight
+onbir kasım boston'dan washington dc'ye tüm uçuşlar,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name B-toloc.state_code O O,flight
+boston'dan denver'a sabahın erken saatlerindeki uçuşlar nelerdir,B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day B-depart_time.period_of_day O O O,flight
+yirmi sekiz eylülde denver pittsburgh arası en ucuz uçuş hangisidir,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O B-cost_relative I-cost_relative O O,flight
+pazartesi dallas'tan oakland california'ya uçuş,B-depart_date.day_name B-fromloc.city_name B-toloc.city_name B-toloc.state_name O,flight
+cumartesi günü dallas'tan san francisco'ya uçmak ve saat 1600'dan önce san francisco'ya varmak istiyorum,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O B-arrive_time.time B-arrive_time.time_relative B-toloc.city_name I-toloc.city_name O O,flight
+sabah san francisco çıkışlı uçuşlar boston'a öğleden sonra inşaat,B-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name O O B-toloc.city_name B-arrive_time.period_of_day I-arrive_time.period_of_day O,flight
+baltimore'dan atlanta'ya öğleden önce gelen uçuşları görmek istiyorum,B-fromloc.city_name B-toloc.city_name B-arrive_time.time B-arrive_time.time_relative O O O O,flight
+bana atlanta için en erken boston kalkışını ve atlanta'dan en son dönüş yolculuğunu bul böylece en uzun süre atlanta'da olabilirim ama aynı gün boston'a dönebilirim,O B-toloc.city_name O B-flight_mod I-flight_mod B-toloc.city_name O O B-toloc.city_name B-flight_mod I-flight_mod O O O O O O O B-toloc.city_name O O O B-return_date.date_relative B-toloc.city_name O,flight
+lütfen bana 1 ağustosta atlanta'dan philadelphia'ya en ucuz gidiş dönüş uçak biletini verin,O O B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O O,airfare
+philadelphia'dan oakland california'ya cuma öğleden sonra uçuşları hakkında bilgi istiyorum,B-fromloc.city_name B-toloc.city_name B-toloc.state_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day O O O O,flight
+pittsburgh'dan atlanta'ya hafta içi hangi öğleden sonra uçuşları mevcuttur,B-fromloc.city_name B-toloc.city_name B-flight_mod I-flight_mod O B-depart_time.period_of_day I-depart_time.period_of_day O O,flight
+denver'da kara taşımacılığını göster,B-city_name O O O,ground_service
+lütfen bana denver'dan boston'a philadelphia'da duraklı uçuşları olan havayollarını göster,O O B-fromloc.city_name B-toloc.city_name B-stoploc.city_name O O O O O,airline
+dallas'tan baltimore'a,B-fromloc.city_name B-toloc.city_name,flight
+washington dc'de araba kiralama,B-city_name B-state_code B-transport_type I-transport_type,ground_service
+amerikan havayolları atlanta'dan san francisco'ya uçuyor mu,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+lütfen bana atlanta'dan denver'a uçmak için kullanılan uçak tipini söyle,O O B-fromloc.city_name B-toloc.city_name O O O O O O,aircraft
+bana denver'dan baltimore'a uçak bileti ver,O B-fromloc.city_name B-toloc.city_name O O O,flight
+ücret sınıfı h nedir,O O B-fare_basis_code O,abbreviation
+cuma günü washington'dan san francisco'ya kahvaltı servisi yapan en erken uçuş hangisidir,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-meal_description O O B-flight_mod I-flight_mod O O,flight
+perşembe sabahları erken saatlerde atlanta'dan washington'a hangi uçuşlar var,B-depart_date.day_name B-depart_time.period_of_day B-depart_time.period_mod O B-fromloc.city_name B-toloc.city_name O O O,flight
+dallas'ta ne tür kara taşımacılığı var,B-city_name O O O O O,ground_service
+pazartesi günü san francisco'dan pittsburgh'a öğlen ve sonrasında başlayan birinci sınıf uçuşların bir listesini alabilir miyim,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_time.time O B-depart_time.time_relative O B-class_type I-class_type O O O O O,flight
+us air boston pittsburgh günlük aktarmasız uçuş ne kadar,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name B-flight_days B-flight_stop O O O,airfare
+saat 1700'den sonra boston'dan atlanta'ya gitmek istiyorum bunu benim için yapabilecek uçuşları söyleyebilir misiniz,O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name O O O O O O O O O,flight
+ücret kodu nedir yn,O O O B-fare_basis_code,abbreviation
+new york'taki havaalanları,B-city_name I-city_name O,airport
+gelecek cumartesi akşamı los angeles'a uçacak iki arkadaş ayarlamak istiyorum insanlardan biri kansas şehrinden diğeri ise las vegas'tan geliyor,B-arrive_date.date_relative B-arrive_date.day_name B-arrive_time.period_of_day B-toloc.city_name I-toloc.city_name O O O O O O O B-fromloc.city_name I-fromloc.city_name O O B-fromloc.city_name I-fromloc.city_name O,flight
+bana washington dc'den san francisco'ya tüm gece uçuşlarını göster ve ücretlerini listele,O B-fromloc.city_name B-fromloc.state_code B-toloc.city_name I-toloc.city_name O B-flight_mod O O O O O,flight
+atlanta'da hangi kara taşımacılığı var,B-city_name O O O O,ground_service
+pittsburgh'dan baltimore'a 4 ile 5 arasında varan uçuşlar,B-fromloc.city_name B-toloc.city_name B-arrive_time.start_time O B-arrive_time.end_time O O O,flight
+ücret kodu qw ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+new york'tan las vegas'a uçuşları göster,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+denver colorado kara taşımacılığı için bilgiye ihtiyacım var,B-city_name B-state_name O O O O O O,ground_service
+amerikan havayollarında philadelphia'dan san francisco'ya uçuş listesi,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+aşk alanına gidiş geliş uçuşları için havayollarını göster,B-fromloc.airport_name I-fromloc.airport_name B-round_trip I-round_trip O O O O,airline
+öğleden sonra kalkan san francisco'dan oakland'a aktarmasız uçuşları listeleyin,B-arrive_time.period_of_day I-arrive_time.period_of_day O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-flight_stop O O,flight
+hangi havayolu denver pittsburgh ve atlanta'ya hizmet ediyor,O O B-fromloc.city_name B-fromloc.city_name O B-fromloc.city_name O O,airline
+delta havayollarının kaç tane birinci sınıf uçuşu var,B-airline_name I-airline_name O O B-class_type I-class_type O O,quantity
+lütfen denver'dan philadelphia'ya gelen uçuşları gösterin,O B-fromloc.city_name B-toloc.city_name O O O,flight
+şimdi bana pittsburgh baltimore uçuşlarını göster,O O B-fromloc.city_name B-toloc.city_name O O,flight
+milwaukee'den orlando'ya çarşamba gecesi veya perşembe sabahı uçuşları göster,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day B-or B-depart_date.day_name B-depart_time.period_of_day O O,flight
+atlanta'dan pittsburgh'a delta havayolları ile uçmak istiyorum,B-fromloc.city_name B-toloc.city_name B-airline_name I-airline_name O O O,flight
+ücret kodu f nedir,O O B-fare_basis_code O,abbreviation
+united airlines'ın yirmi eylül sabahı uçuşları nelerdir,B-airline_name I-airline_name B-depart_date.day_number B-depart_date.month_name B-depart_time.period_of_day O O,flight
+denver ile dallas arasında uçuşu olan tüm havayollarını göster,B-fromloc.city_name O B-toloc.city_name O O O O O O,airline
+nashville'den seattle'a en ucuz uçak bileti,B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative O O,airfare
+bir hizmet sınıfı kodu f ile american havayollarının kaç uçuşu var,O O B-fare_basis_code O B-fare_basis_code O B-airline_name I-airline_name O O O,quantity
+boston ve washington arasında aktarmasız bir uçuş bulun washington'a saat 5 civarında varan,B-fromloc.city_name O B-toloc.city_name O B-flight_stop O O O B-toloc.city_name O B-arrive_time.time B-arrive_time.time_relative O,flight
+pittsburgh'dan baltimore'a lütfen bir ocakta,B-fromloc.city_name B-toloc.city_name O B-depart_date.day_number B-depart_date.month_name,flight
+bana san francisco'dan atlanta'ya uçuşların ücretlerini ve saatlerini göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O B-flight_time O,airfare+flight_time
+hangi havayolları boston'dan denver'a uçuyor,O O B-fromloc.city_name B-toloc.city_name O,airline
+atlanta'da hangi kara taşımacılığı var,B-city_name O O O O,ground_service
+dallas fort worth havaalanına ne kadar uzaklıkta dallas,B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O O B-fromloc.city_name,distance
+tampa florida miami arası tek yönlü en ucuz uçuşları listele,B-fromloc.city_name B-fromloc.state_name B-toloc.city_name O B-round_trip I-round_trip B-cost_relative I-cost_relative O O,flight
+bana philadelphia'dan baltimore'a uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+denver'da kara taşımacılığı,B-city_name O O,ground_service
+lütfen çarşamba ve perşembe günleri atlanta'dan baltimore'a tüm uçuşları listeleyin,O B-depart_date.day_name O B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O O,flight
+philadelphia'dan denver'a dl 1083 uçuşu cumartesi günleri uçuyor mu,B-fromloc.city_name B-toloc.city_name B-airline_code B-flight_number O B-depart_date.day_name O O O,flight
+yirmi altıncı mayısta tampa'dan seattle'a giden bir uçuş rezervasyonu yapmak istiyorum yolda milwaukee'de durmak istiyorum,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O O O O O O O B-stoploc.city_name O O,flight
+boston'dan atlanta'ya uçmak istiyorum en ucuz ücreti istiyorum lütfen,B-fromloc.city_name B-toloc.city_name O O B-cost_relative I-cost_relative O O O,flight
+bana montreal philly uçuşlarını göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+pazar öğleden sonra oakland'dan dallas'a hangi uçuşlar mevcut,B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O O,flight
+ap 80 kısıtlamasını açıklayın,B-restriction_code I-restriction_code O O,abbreviation
+denver'da bir mola ile baltimore'dan san francisco'ya gitmek istiyorum,B-stoploc.city_name O O O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+san francisco philadelphia uçuşu ile ilgili bilgiler,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O,flight
+cincinnati'den tampa'ya en kısa sabah uçuşları,B-fromloc.city_name B-toloc.city_name B-flight_mod I-flight_mod B-depart_time.period_of_day O,flight
+on beş ekim 1991'de boston'dan washington'a uçuşlar nelerdir,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_date.year B-fromloc.city_name B-toloc.city_name O O,flight
+çarşamba akşamı denver'dan sfo'ya hangi uçuşlar var,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.airport_code O O O,flight
+bana yirmi iki temmuzdaki boston'dan dc'ye amerikan havayollarının uçuşlarının bir listesini göster,O B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.state_code B-airline_name I-airline_name O O O O,flight
+us air 269 boston'dan 428'de ayrılıyor baltimore'a varış saati nedir,B-airline_name I-airline_name B-flight_number B-fromloc.city_name B-depart_time.time O B-toloc.city_name B-flight_time I-flight_time O,flight
+atlanta'dan baltimore'a pazartesi sabahı erken kalkan uçuşlar hakkında bilgi istiyorum,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day B-depart_time.period_mod O O O O O,flight
+şimdi bana memphis'ten cleveland'a uçuşları göster,O O B-fromloc.city_name B-toloc.city_name O O,flight
+nashville'den phoenix'e hangi uçuşlar kalkıyor,B-fromloc.city_name B-toloc.city_name O O O,flight
+baltimore dallas uçuşları için uçak bileti ücretini göster,B-fromloc.city_name B-toloc.city_name O O O O O O,airfare
+denver san francisco uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+hangi havayolları indianapolis yoluyla san francisco'dan washington'a gider,O O B-stoploc.city_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O,airline
+on iki kasım'da washington dc'den san francisco'ya tüm uçuşlar,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-fromloc.state_code B-toloc.city_name I-toloc.city_name O O,flight
+pittsburgh'dan philadelphia'ya gidiş dönüş 1000 doların altında ücretler,B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip B-fare_amount I-fare_amount B-cost_relative O,airfare
+tek yön 466 dolardan daha ucuza salı günü new york'tan miami'ye aktarmasız uçuşları göster,B-round_trip I-round_trip B-fare_amount I-fare_amount O B-cost_relative B-arrive_date.day_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-flight_stop O O,flight
+philadelphia'dan dallas'a amerikan havayollarında 1145'ten önce varan uçuşlar istiyorum,B-fromloc.city_name B-toloc.city_name B-airline_name I-airline_name B-arrive_time.time B-arrive_time.time_relative O O O,flight
+united airlines'da san francisco'dan denver'a business class ücretlerini göster,B-airline_name I-airline_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-class_type I-class_type O O,airfare
+logan ve bwi arasındaki en erken uçuş ne zaman,B-fromloc.airport_name O B-toloc.airport_code O B-flight_mod I-flight_mod O O O,flight
+pittsburgh havaalanını tarif et,B-airport_name I-airport_name O O,airport
+us air pittsburgh'dan oakland'a denver üzerinden bağlanan uçuşları göster,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name B-stoploc.city_name O B-connect O O,flight
+charlotte'den baltimore'a salı günü öğleden önce tüm aktarmasız uçuşları listele,B-fromloc.city_name B-toloc.city_name B-arrive_date.day_name O B-arrive_time.time B-arrive_time.time_relative O B-flight_stop O O,flight
+pazartesi günü minneapolis'ten anka kuşuna,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name,flight
+lütfen bana denver'dan baltimore'a uçan tüm havayollarının uçuşlarını ve ücretlerini listeleyin,O O B-fromloc.city_name B-toloc.city_name O O O O O O O,flight+airfare
+hangi havayolu hp kodunu kullanır,O O B-airline_code O O,airline
+çarşamba günü san francisco'dan boston'a uçuş bul,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+dallas havaalanından dallas şehir merkezine kara ulaşımı düzenlemelerinden bahseder misiniz,B-fromloc.airport_name I-fromloc.airport_name B-toloc.city_name O O O O O O O,ground_service
+iki ağustos'ta pittsburgh san francisco arasındaki tüm uçuşları göster,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O,flight
+bana charlotte'tan baltimore'a sabah uçuşları ver,O B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day O O,flight
+baltimore veya washington'dan denver'da bir mola ile san francisco'ya giden herhangi bir şey,B-fromloc.city_name B-or B-fromloc.city_name B-stoploc.city_name O O O B-toloc.city_name I-toloc.city_name O O O O,flight
+bana boston'dan denver'a uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+bana columbus'tan charlotte'a uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+altı mayıs perşembe new york city'den montreal'e bir uçuşa ihtiyacım var,B-depart_date.day_number B-depart_date.month_name B-depart_date.day_name B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O,flight
+philadelphia'dan san francisco'ya,B-fromloc.city_name B-toloc.city_name I-toloc.city_name,flight
+boston'dan san francisco'ya en erken uçuş ne zaman,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_mod I-flight_mod O O O,flight
+pittsburgh havaalanından limuzin servisi var mı,B-fromloc.airport_name I-fromloc.airport_name B-transport_type O O O,ground_service
+boston kara taşımacılığı,B-city_name O O,ground_service
+boston'dan san francisco'ya en erken uçuş lütfen yemek servisi olacak,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_mod I-flight_mod O O B-meal O O,flight
+qw kodu ne anlama geliyor,B-fare_basis_code O O O O,abbreviation
+hp hangi havayolu,B-airline_code O O,airline
+dallas'ta araç kiralama fiyatları ne kadar,B-city_name B-transport_type I-transport_type O O O,ground_fare
+cumartesi veya pazar günü milwaukee'den anka kuşuna giden uçuşları göster,B-depart_date.day_name B-or B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+pittsburgh'dan atlanta'ya bir uçuşla ilgileniyorum,B-fromloc.city_name B-toloc.city_name O O O,flight
+çarşamba günü kansas city'den cleveland'a uçuşlar,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O,flight
+denver'dan san francisco'ya aktarmasız uçuş var mı,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_stop O O O,flight
+sekiz ağustosta san francisco'dan boston'a tüm uçuşları göster,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+philadelphia ve pittsburgh arasında hangi havayollarının uçuşları var,B-fromloc.city_name O B-toloc.city_name O O O O O,airline
+pazartesi boston'dan atlanta'ya gitmek istiyorum,B-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O,flight
+delta uçuşundan sonra pittsburgh'dan san francisco'ya bir sonraki uçuş nedir 1059,B-airline_name O B-mod B-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-mod O O B-flight_number,flight
+bana pazar günü öğleden sonra miami'den cleveland'a en ucuz uçuşu göster,O B-depart_date.day_name O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative O O,flight
+atlanta'dan denver'a öğlen 12'den önce uçan ne tür bir uçak kullanılır,B-fromloc.city_name B-toloc.city_name B-depart_time.time I-depart_time.time B-depart_time.time_relative O O O O O O,aircraft
+bana yarın öğleden sonra atlanta'dan kalkan boston'dan atlanta'ya tüm uçuşları göster,O B-depart_date.today_relative B-depart_time.time B-depart_time.time_relative B-fromloc.city_name O B-fromloc.city_name B-fromloc.city_name O O O,flight
+tacoma'da araba kiralamak ne kadara mal olur,B-city_name B-transport_type O O O O O,ground_fare
+ua 270 denver'dan philadelphia'ya ne tür bir uçak,B-airline_code B-flight_number B-fromloc.city_name B-toloc.city_name O O O B-airline_code,aircraft
+boston'dan atlanta'ya perşembe günü saat 5'ten önceki tüm uçuşları listele,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name O B-depart_time.time I-depart_time.time B-depart_time.time_relative O O O,flight
+dallas'tan boston'a en erken uçuşu istiyorum,B-fromloc.city_name B-toloc.city_name B-flight_mod I-flight_mod O O,flight
+sabahleyin atlanta'dan delta uçuşlarını göster,B-depart_time.period_of_day B-fromloc.city_name B-airline_name O O,flight
+salt lake city'den las vegas'a hangi uçuşlar,B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+philadelphia ile denver arasında öğleden sonra kalkan uçuşların listesini göster,B-fromloc.city_name O B-toloc.city_name O B-depart_time.period_of_day I-depart_time.period_of_day O O O O,flight
+atlanta'dan boston'a en ucuz tek yön ücret nedir,B-fromloc.city_name B-toloc.city_name B-class_type I-class_type B-round_trip I-round_trip O O,airfare
+tacoma'dan montreal'e tek yön kaç bilet var,B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O O,quantity
+philadelphia'dan kalkan ve pittsburgh'a öğleden sonra varan uçuşlar hakkında bilgi almak istiyorum,B-fromloc.city_name O O B-toloc.city_name B-arrive_time.period_of_day I-arrive_time.period_of_day O O O O O O,flight
+önümüzdeki hafta çarşamba günü pittsburgh'dan boston'a hangi uçuşlar mevcut,B-depart_date.date_relative O B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O O,flight
+kontinental havayollarında boston'dan denver'a uçuş var mı,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name O O O,flight
+dallas atlanta pm uçuşları,B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day O,flight
+baltimore philadelphia uçuşları ile ilgili bilgiler,B-fromloc.city_name B-toloc.city_name O O O O,flight
+atlanta'dan st louis'ye salı günü saat 230 civarında hangi uçuşlar var,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name O O B-arrive_time.time B-arrive_time.time_relative O O O,flight
+bana san francisco'da kara ulaşımını göster,O B-city_name I-city_name O O O,ground_service
+newark new jersey'den ontario california'ya phoenix'e bağlanan hangi uçuşlarınız var,B-fromloc.city_name B-fromloc.state_name I-fromloc.state_name B-toloc.city_name B-toloc.state_name B-stoploc.city_name B-connect O O O,flight

@@ -1,0 +1,894 @@
+text,label_slot,label_intent
+charlotte'tan las vegas'a st louis'de duracak bir uçuş bulmak istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-stoploc.city_name I-stoploc.city_name O O O O O,flight
+ilk nisanda tacoma'dan san jose'a saat 7'den önce kalkan bir bilete ihtiyacım var,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_time.time B-depart_time.time B-depart_time.time_relative O B-depart_date.day_number O O O,airfare
+ilk nisanda anka kuşundan san diego'ya giden bir uçağa ihtiyacım var,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-depart_date.day_number O O O,flight
+ilk nisanda phoenix'den san diego'ya tek yönlü seyahat eden bir uçak istiyorum,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-round_trip I-round_trip O O B-depart_date.day_number O O,flight
+delta havayollarında ilk nisan için orlando'dan salt lake city'e bir uçuş istiyorum,B-airline_name I-airline_name B-depart_date.day_number B-depart_date.month_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-depart_date.day_number O O,flight
+toronto'dan newark'a çarşamba akşamı veya perşembe sabahı tek yön bir uçuşa ihtiyacım var,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O B-depart_date.day_name B-depart_time.period_of_day B-round_trip I-round_trip O O O O,flight
+pazartesi sabahı columbus'tan indianapolis'e uçmak istiyorum,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O,flight
+altı nisan çarşamba günü saat 3'ten sonra long beach'den columbus'a uçmak istiyorum,B-depart_date.day_number B-depart_date.month_name B-depart_date.day_name I-depart_date.day_name B-depart_time.time B-depart_time.time B-depart_time.time_relative B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+6 nisan çarşamba saat 12'den sonra long beach'den columbus'a uçmak istiyorum,B-depart_date.day_number B-depart_date.month_name B-depart_date.day_name O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+6 nisan çarşamba günü long beach'den columbus'a uçuş var mı,B-depart_date.day_number B-depart_date.month_name B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+memphis'ten tacoma akşam yemekli uçuş bul,B-fromloc.city_name B-toloc.city_name B-meal_description I-meal_description O O,flight
+bir sonraki çarşamba günü kansas şehrinden chicago'ya uçuş perşembe günü saat 1900 civarında chicago'ya varmalıdır,O B-depart_date.date_relative B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O B-return_date.day_name O O B-arrive_time.time B-arrive_time.time_relative B-toloc.city_name O,flight
+uçuş ve fiyatları göster kansas city chicago önümüzdeki çarşamba günü saat 1900 ile chicago'ya varış,O O O O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.date_relative B-depart_date.day_name I-depart_date.day_name O B-arrive_time.time B-arrive_time.time_relative B-toloc.city_name O,flight+airfare
+miami'den chicago'ya amerikan uçuşu 1700 civarında chicago'ya varıyor,B-fromloc.city_name B-toloc.city_name B-airline_name O B-arrive_time.time B-arrive_time.time_relative B-toloc.city_name O,flight
+gelecek cumartesi new york'a varan uçuşları bul,B-arrive_date.date_relative B-arrive_date.day_name B-toloc.city_name I-toloc.city_name O O O,flight
+dokuz nisan cumartesi salt lake city'den new york'a aktarmasız uçuşlar bulun,B-depart_date.day_number B-depart_date.month_name B-depart_date.day_name B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_stop O O,flight
+bugün için burbank milwaukee uçuşlarını göster,B-depart_date.today_relative O B-fromloc.city_name B-toloc.city_name O O,flight
+uçuşları göster yarın akşam milwaukee'den st louis,O O B-depart_date.today_relative B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name,flight
+uçuşları göster cumartesi akşamı st louis'ten burbank'a,O O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name B-toloc.city_name,flight
+burbank'tan st louis'ye pazartesi günü uçuşları göster,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name I-depart_date.day_name O O,flight
+pazartesi burbank'tan milwaukee'ye uçuşları göster,B-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O,flight
+milwaukee'den st louis'ye salı akşamı uçuşları göster,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O O,flight
+uçuşları göster çarşamba akşamı st louis'ten burbank'a,O O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name B-toloc.city_name,flight
+kansas city'den los angeles'a hangi uçuşlar,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+las vegas'tan los angeles'a hangi uçuşlar,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+dokuz nisanda kansas city'den los angeles'a hangi uçuşlar,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+hangi uçuşlar las vegas'tan los angeles california'ya gidiyor ve dokuz nisanda 1600 ile 1700 arasında varıyor,O O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-toloc.state_name O O B-arrive_date.day_number B-arrive_date.month_name B-arrive_time.start_time O B-arrive_time.end_time O O,flight
+hangi us air uçakları orlando'dan cleveland'a gidiyor,O B-airline_name I-airline_name O B-fromloc.city_name B-toloc.city_name O,flight
+beş nisanda cleveland'dan indianapolis'e hangi uçuşlar gidiyor,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O O O,flight
+beş nisanda indianapolis'ten san diego'ya hangi uçuşlar gidiyor,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+beş nisanda cleveland'dan indianapolis'e hangi uçuşlar gidiyor,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O O O,flight
+nashville'den tacoma'ya hangi uçuşlar,B-fromloc.city_name B-toloc.city_name O O,flight
+tacoma havaalanı havaalanından şehir merkezine ulaşım sunuyor mu,B-airport_name I-airport_name I-airport_name O O O O O,ground_service
+tacoma'dan san jose'a hangi uçuşlar,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+nashville tacoma uçuşları haftanın hangi günü yapılmaktadır,B-fromloc.city_name B-toloc.city_name O O O O O,day_name
+tacoma san jose uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+san jose nashville uçuşları haftanın hangi günleri yapılmaktadır,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O O,day_name
+tacoma san jose uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+boston'dan orlando'ya giden bir uçağa ihtiyacım var,B-fromloc.city_name B-toloc.city_name O O O O O,flight
+boston'dan orlando'ya new york aktarmalı uçuş var mı,B-fromloc.city_name B-toloc.city_name B-stoploc.city_name I-stoploc.city_name B-connect O O O,flight
+boston orlando arası columbus aktarmalı uçuş var mı,B-fromloc.city_name B-toloc.city_name O B-stoploc.city_name B-connect O O O,flight
+bu uçuş akşam yemeği servisi yapıyor mu,O O B-meal_description I-meal_description O O O,flight
+charlotte'tan miami'ye bir uçuşa ihtiyacım var,B-fromloc.city_name B-toloc.city_name O O O O,flight
+miami'den toronto'ya aktarmasız bir uçuşa ihtiyacım var,B-fromloc.city_name B-toloc.city_name B-flight_stop O O O O,flight
+toronto'dan st louis'ye aktarmasız bir uçuşa ihtiyacım var,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_stop O O O O,flight
+toronto'dan st louis'ye bir uçuşa ihtiyacım var,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O,flight
+st louis'den charlotte'a bir uçuşa ihtiyacım var,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O,flight
+united airlines ile la guardia'dan san jose'a bir uçuşa ihtiyacım var,B-airline_name I-airline_name O B-fromloc.airport_name I-fromloc.airport_name B-toloc.city_name I-toloc.city_name O O O O,flight
+tampa'dan milwaukee'ye bir uçuşa ihtiyacım var,B-fromloc.city_name B-toloc.city_name O O O O,flight
+milwaukee'den seattle'a bir uçuşa ihtiyacım var,B-fromloc.city_name B-toloc.city_name O O O O,flight
+tampa'dan milwaukee'ye giden 811 numaralı amerikan uçuşunda hangi yemekler servis ediliyor,B-fromloc.city_name B-toloc.city_name O B-flight_number O B-airline_name O O B-meal O O,meal
+milwaukee'den seattle'a giden 665 673 numaralı amerikan uçuşunda hangi yemekler servis ediliyor,B-fromloc.city_name B-toloc.city_name O B-flight_number I-flight_number O B-airline_name O O B-meal O O,meal
+memphis'ten las vegas'a bir uçuşa ihtiyacım var,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O,flight
+las vegas'tan ontario'ya bir uçuşa ihtiyacım var,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O,flight
+ontario'dan memphis'e bir uçuşa ihtiyacım var,B-fromloc.city_name B-toloc.city_name O O O O,flight
+hangi uçuşlar milwaukee'den tampa'ya gidiyor ve nashville'de duruyor,O O B-fromloc.city_name B-toloc.city_name O O B-stoploc.city_name O,flight
+hangi uçuşlar önümüzdeki cumartesi öğleden sonra newark'tan ayrılıyor ve los angeles'a varıyor,O O B-depart_date.date_relative B-depart_date.day_name B-depart_time.period_of_day B-depart_time.time_relative B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name O,flight
+hangi uçuşların detroit'ten ayrılıp st petersburg saat 9 civarında,O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-arrive_time.time B-arrive_time.time_relative,flight
+kuzeybatı havayolunun hangi uçuşları detroit'ten ayrılıp st petersburg,B-airline_name I-airline_name O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name,flight
+hangi uçuşlar önümüzdeki salı chicago'dan ayrılıyor ve saat 1800 civarında detroit'e varıyor,O O B-depart_date.date_relative B-depart_date.day_name B-fromloc.city_name O O O B-arrive_time.time B-arrive_time.time_relative B-toloc.city_name O,flight
+bana chicago'dan detroit'e gidiş dönüş uçuşlarını göster önümüzdeki salı günü ayrılıp ertesi gün geri dön,O B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O B-depart_date.date_relative B-depart_date.day_name I-depart_date.day_name O B-return_date.date_relative I-return_date.date_relative O O,flight
+hangi gidiş dönüş uçuşları önümüzdeki salı akşam 6 civarında chicago'dan ayrılıp detroit'e varıyor,O B-round_trip I-round_trip O B-depart_date.date_relative B-depart_date.day_name B-depart_time.time I-depart_time.time B-depart_time.time_relative B-fromloc.city_name O B-toloc.city_name O,flight
+hangi gidiş dönüş uçuşları önümüzdeki salı chicago'dan ayrılıyor ve saat 1800 civarında detroit'e varıyor,O B-round_trip I-round_trip O B-depart_date.date_relative B-depart_date.day_name B-fromloc.city_name O O O B-arrive_time.time B-arrive_time.time_relative B-toloc.city_name O,flight
+hangi uçuşlar pazartesi montreal'den kalkıyor ve sabah chicago'ya varıyor,O O B-depart_date.day_name B-fromloc.city_name O O B-arrive_time.period_of_day B-toloc.city_name O,flight
+12 nisan'da chicago'dan kalkan ve indianapolis'e sabah varan uçuşlar,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name O O B-toloc.city_name B-arrive_time.period_of_day O O,flight
+hangi uçaklar indianapolis'ten on üç nisan çarşamba günü kalkıyor ve sabah montreal'e varıyor,O O B-fromloc.city_name B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_date.day_name I-depart_date.day_name O O B-arrive_time.period_of_day B-toloc.city_name O,flight
+hangi uçuşlar on iki nisanda indianapolis'ten kalkıyor ve montreal'e 2200 civarında varıyor,O O B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name O O B-toloc.city_name B-arrive_time.time B-arrive_time.time_relative O,flight
+long beach'ten st louis'ye gitmek istiyorum ve ben dallas'ta durmak istiyorum ayrıca uçuş sırasında öğle yemeği yemek istiyorum,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O B-stoploc.city_name O O O O O B-meal_description I-meal_description O O,flight
+önümüzdeki çarşamba akşam 7 sularında şikago'ya varan bir şikago gezisinde kansas şehrinden ayrılmak istiyorum,B-depart_date.date_relative B-depart_date.day_name B-arrive_time.time B-arrive_time.time B-arrive_time.time_relative B-toloc.city_name O O B-toloc.city_name O B-fromloc.city_name I-fromloc.city_name O O,flight
+chicago'dan akşam 7 civarında kansas şehrine dönmek istiyorum,B-fromloc.city_name B-depart_time.time B-depart_time.time B-depart_time.time_relative B-toloc.city_name I-toloc.city_name O O,flight
+bu öğleden sonra cincinnati'den burbank'a bir amerikan uçuşuyla ayrılmak istiyorum,B-depart_date.today_relative B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O B-airline_name O O O,flight
+pazar akşamı montreal quebec'ten san diego california uçağıyla ayrılmak istiyorum,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-fromloc.state_name B-toloc.city_name I-toloc.city_name B-toloc.state_name O O O,flight
+montreal quebec'ten san diego california'ya pazar günü uçuşlar nelerdir,B-fromloc.city_name B-fromloc.state_name B-toloc.city_name I-toloc.city_name B-toloc.state_name B-depart_date.day_name O O O,flight
+salı günü san diego california'dan indianapolis indiana'ya uçuşlar var uçuşun öğleden sonra olmasını istiyorum,B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name B-fromloc.state_name B-toloc.state_name B-toloc.state_name O O O B-depart_time.period_of_day I-depart_time.period_of_day O O,flight
+perşembe sabahı indianapolis'ten toronto'ya aktarmasız bir uçuş istiyorum,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name B-flight_stop O O O,flight
+cuma sabahı toronto'dan montreal'e uçmak istiyorum,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O,flight
+bugün los angeles'tan charlotte'a sabah erken bir uçuş istiyorum,B-depart_date.today_relative B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day B-depart_time.period_of_day O O O,flight
+çarşamba gecesi charlotte'tan newark'a bir uçuş istiyorum,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O O,flight
+cuma gecesi newark'tan los angeles'a bir uçuş istiyorum,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+tampa'dan montreal'e new york yoluyla bir uçuş bul,B-fromloc.city_name B-toloc.city_name B-stoploc.city_name I-stoploc.city_name O O O O,flight
+lütfen miami florida'dan las vegas nevada'ya saat 4'ten önce gelen bir uçuş bulun,O B-fromloc.city_name B-fromloc.state_name B-toloc.city_name I-toloc.city_name B-toloc.state_name B-arrive_time.time I-arrive_time.time B-arrive_time.time_relative O O O O,flight
+lütfen las vegas'tan michigan'a bir uçuş bulun,O B-fromloc.city_name I-fromloc.city_name B-toloc.state_name O O O,flight
+lütfen detroit michigan'dan st petersburg'ye saat 22'den önce varan bir uçuş bulun,O B-fromloc.city_name B-fromloc.state_name B-toloc.city_name I-toloc.city_name O B-arrive_time.time B-arrive_time.time_relative O O O O,flight
+lütfen st petersburg'dan miami'ye perşembe günü bir uçuş bulun,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_name O O O O,flight
+lütfen alaska havayollarında san diego'dan toronto'ya bir uçuş bulun,O B-airline_name I-airline_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+lütfen yarın nashville'de aktarmalı columbus houston uçuşlarını bulun,O B-depart_date.today_relative B-stoploc.city_name O B-fromloc.city_name B-toloc.city_name O O,flight
+lütfen bana nashville'den houston'a kesintisiz akşam yemeği servisi olan uçuşları verin,O O B-fromloc.city_name B-toloc.city_name B-flight_stop B-meal_description I-meal_description O O O O,flight
+lütfen kansas city'den newark'a uygun uçuşları bulun,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+lütfen kansas şehrinden newark'a orlando'dan kansas şehrine giden bir uçuş bulun,O B-toloc.city_name I-toloc.city_name B-toloc.city_name B-toloc.city_name B-toloc.city_name I-toloc.city_name O O O O,flight
+lütfen kansas şehrinden newark'a bir uçuş bulun,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+lütfen newark'tan orlando'ya bir uçuş bulun,O B-fromloc.city_name B-toloc.city_name O O O,flight
+lütfen orlando'dan kansas şehrine bir uçuş bulun,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+öğleden sonra columbus'tan phoenix'e cincinnati üzerinden uçmak istiyorum,B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name B-stoploc.city_name O O O,flight
+los angeles'ta hangi havaalanlarının olduğunu bilmek istiyorum,B-city_name I-city_name O O O O O,airport
+burbank'taki havaalanının kansas şehrinden gelen bir uçuşu var mı,B-toloc.city_name O B-fromloc.city_name I-fromloc.city_name O O O O O,flight
+kansas city'den burbank'a cumartesi günleri öğleden sonra hangi uçaklar geliyor,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-arrive_date.day_name O B-arrive_time.period_of_day I-arrive_time.period_of_day O O O,flight
+las vegas'tan burbank'a yirmi üç nisan cumartesi öğleden sonra hangi uçuşlar varıyor,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day O O O,flight
+orlando'dan cleveland'a saat 2200 civarında varan uçuşlar nelerdir,B-fromloc.city_name B-toloc.city_name O B-arrive_time.time B-arrive_time.time_relative O O O,flight
+yirmi birinci nisan öğleden sonra indianapolis'ten san diego'ya hangi uçuşlar mevcut,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+cleveland'dan yirmi bir nisan sabahı indianapolis'e hangi uçuşlar gidiyor,B-fromloc.city_name B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_time.period_of_day B-toloc.city_name O O O,flight
+yirmi bir nisan sabahı nashville'den tacoma'ya hangi uçuşlar mevcut,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O O,flight
+yirmi iki nisan sabahı tacoma'dan san jose'a hangi uçuşlar mevcut,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+san jose'dan nashville'e hangi uçuşlar mevcut yirmi üç nisan sabahı kalkıyor,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_time.period_of_day O,flight
+detroit ve westchester ilçesi arasındaki en pahalı tek yön ücreti nedir,B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-cost_relative I-cost_relative B-round_trip I-round_trip O O,airfare
+detroit ve westchester ilçesi arasında hangi havayolları uçuyor,B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O,airline
+detroit'ten westchester ilçesine hareket saatleri nedir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_time I-flight_time O,flight_time
+baltimore'dan oakland'a akşam yemeği servisi yapan en son uçuş hangisidir,B-fromloc.city_name B-toloc.city_name B-meal_description I-meal_description O O B-flight_mod B-flight_mod O O,flight
+baltimore ve oakland arasında kahvaltı servisi yapan en erken uçuş hangisidir,B-fromloc.city_name O B-toloc.city_name O B-meal_description O O B-flight_mod I-flight_mod O O,flight
+amerika batı birinci sınıf boston'dan hangi şehirlere uçuyor,B-airline_name I-airline_name B-class_type I-class_type B-fromloc.city_name O O O,city
+boston'dan san diego'ya hangi havayolu uçuyor,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,airline
+dallas'tan tampa'ya en son kahvaltı uçuşu nedir,B-fromloc.city_name B-toloc.city_name B-flight_mod B-flight_mod B-meal_description O O,flight
+seattle'dan boston'a tüm lufthansa uçuşlarını minneapolis'te aktarmalı olarak göster,B-fromloc.city_name B-toloc.city_name O B-airline_name O B-stoploc.city_name O O O,flight
+seattle'dan boston'a tüm uçuşları minneapolis'te aktarmalı olarak göster,B-fromloc.city_name B-toloc.city_name O O B-stoploc.city_name O O O,flight
+dallas'ta aktarmalı philadelphia san francisco uçuşlarını listele,B-stoploc.city_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+bana boston ve denver arasındaki bağlantılı uçuşları ve kullanılan uçak türlerini göster,O B-fromloc.city_name O B-toloc.city_name O B-connect O O O O O O,flight
+philadelphia'dan fort worth'a tüm sabah uçuşlarını göster,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-depart_time.period_of_day O O,flight
+kansas city'den st paul'ye tüm uçuşları göster,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+bana kansas şehrinden st paul 608 numaralı kuzeybatı uçuşunu göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_number O B-airline_name O O,flight
+pazartesi indianapolis charlotte arasındaki tüm uçuşları göster,B-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O O O,flight
+charlotte havaalanı charlotte havaalanı ve şehir charlotte arasındaki kara taşımacılığı nedir,B-city_name I-city_name B-city_name I-city_name O O B-city_name O O O O,ground_service
+bana charlotte minneapolis arası pazartesi 1400'te veya daha sonra kalkan tüm uçuşları göster,O B-fromloc.city_name B-toloc.city_name O B-depart_date.day_name B-depart_time.time O O B-depart_time.time_relative O O O O,flight
+salı sabahı charlotte minneapolis arasındaki tüm uçuşları göster,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O O O,flight
+bana salı sabahı charlotte minneapolis arası direkt uçuşları göster,O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O B-connect O O,flight
+bana pazartesi günü charlotte'tan minneapolis'e us 1500 uçuşunu göster lütfen,O B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name B-airline_code B-flight_number O O O,flight
+bana minneapolis'ten indianapolis'e salı günü saat 1400'ten sonra kalkan tüm uçuşları göster,O B-fromloc.city_name B-toloc.city_name B-depart_date.day_name O O B-depart_time.time B-depart_time.time_relative O O O O,flight
+bana minneapolis indiana uçuşlarını göster,O B-fromloc.city_name B-toloc.state_name O O,flight
+salı öğleden sonra minneapolis'ten indianapolis'e uçuşları göster,B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O,flight
+bana pazartesi günü indianapolis'ten charlotte'a us 1207 uçuşunu ve pazartesi charlotte'tan minneapolis'e 1500 uçuşunu ve minneapolis'ten indianapolis'e twa 639 uçuşunu göster,O B-depart_date.day_name I-depart_date.day_name B-toloc.city_name B-fromloc.city_name B-airline_code B-flight_number O O B-depart_date.day_name B-fromloc.city_name B-fromloc.city_name B-flight_number O O B-fromloc.city_name B-toloc.city_name B-airline_code B-flight_number O O,flight
+bana las vegas'tan new york city'e tüm uçuşları göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O,flight
+hangi farklı havayolları las vegas'tan new york city'e gidiyor,O O O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O,airline
+cuma günü las vegas'tan jfk'ye amerika batı ve twa'daki tüm uçuşları göster,B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name B-toloc.airport_code B-airline_name I-airline_name O B-airline_code O O O,flight
+tacoma'dan miami'ye yarın saat 1800'den sonra kalkan uçuşlar nelerdir,B-fromloc.city_name B-toloc.city_name B-depart_date.today_relative O B-depart_time.time B-depart_time.time_relative O O O,flight
+on haziranda san diego'dan houston'a uçmak istiyorum,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name I-fromloc.city_name B-depart_date.day_number O O,flight
+on haziranda saat 18'den sonra houston'dan newark'a amerikan havayolları uçuşu var mı,B-depart_date.day_number B-depart_date.month_name O B-depart_time.time B-depart_time.time_relative B-depart_date.day_number B-toloc.city_name B-airline_name I-airline_name O O O,flight
+on haziranda saat 3'ten sonra houston'dan newark'a amerikan havayolları uçuşu var mı,B-depart_date.day_number B-depart_date.month_name B-depart_time.time B-depart_time.time B-depart_time.time_relative B-depart_date.day_number B-toloc.city_name B-airline_name I-airline_name O O O,flight
+6 haziran'da cincinnati'den denver'a gitmem gerekiyor akşam 6'ya kadar,B-arrive_date.day_number B-arrive_date.month_name B-fromloc.city_name B-toloc.city_name O O B-arrive_time.time I-arrive_time.time B-arrive_time.time_relative,flight
+denver'da kara taşımacılığı nedir,B-city_name O O O,ground_service
+denver'a taksi ücreti ne kadar,B-city_name B-transport_type O O O,ground_fare
+denver'da kara taşımacılığı ücretleri nedir,B-city_name O O O O,ground_fare
+denver'dan westchester county'ye 7 haziran'da saat 3'ten sonra uçmam gerekiyor,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_number B-depart_date.month_name B-depart_time.time B-depart_time.time B-depart_time.time_relative O O,flight
+westchester ilçesinde kara taşımacılığı nedir,B-city_name I-city_name O O O,ground_service
+sekiz haziran'da saat 3'ten sonra westchester county'den cincinnati'ye united airlines uçağına binmem gerekiyor,B-depart_date.day_number B-depart_date.month_name B-depart_time.time B-depart_time.time B-depart_time.time_relative B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-airline_name I-airline_name O O O,flight
+sekiz haziranda hangi birleşik havayolları uçuşları westchester ilçesinden cincinnati'ye gidiyor,B-depart_date.day_number B-depart_date.month_name O B-airline_name I-airline_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O,flight
+sekiz haziran'da westchester county'den cincinnati'ye hangi uçuşlar var,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+us air altı haziranda cincinnati'den denver'a uçuyor mu,B-airline_name I-airline_name B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O O,flight
+cincinnati'den denver'a 6 haziran'daki uçuşları listele,B-fromloc.city_name B-toloc.city_name B-depart_date.day_number B-depart_date.month_name O O,flight
+yedi haziranda denver'dan westchester ilçesine uçuşları listele,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+westchester county'den cincinnati'ye sekiz haziran'daki uçuşları listele,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_number B-depart_date.month_name O O,flight
+cincinnati'den westchester county'ye 6 haziran'daki uçuşları listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_number B-depart_date.month_name O O,flight
+westchester county'den denver'a yedi haziran'daki uçuşları listeleyin,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_number B-depart_date.month_name O O,flight
+sekiz haziran denver cincinnati uçuşları,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O,flight
+denver'dan cincinnati'ye 6 haziran'da 1600'dan sonra uçuşları listeleyin,B-fromloc.city_name B-toloc.city_name B-depart_date.day_number B-depart_date.month_name B-depart_time.time B-depart_time.time_relative O O,flight
+yedinci haziranda cincinnati'den westchester ilçesine uçuşları listele,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+westchester county'den cincinnati'ye 7 haziran'da saat 1700'den sonra kalkan uçuşları listeleyin,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_number B-depart_date.month_name O B-depart_time.time B-depart_time.time_relative O O O,flight
+6 haziran'da saat 6 ile 10 arasında aşk alanından hangi havayolları kalkıyor,B-depart_date.day_number B-depart_date.month_name O B-depart_date.day_number O B-depart_time.end_time O B-fromloc.airport_name I-fromloc.airport_name O O O,airline
+altı haziranda love field'e hangi uçaklar varır,B-arrive_date.day_number B-arrive_date.month_name B-toloc.airport_name I-toloc.airport_name O O O,flight
+montreal'den philly'ye sabah 9'dan önceki uçuşları listele,B-fromloc.city_name B-toloc.city_name B-depart_time.time B-depart_time.time B-depart_time.time_relative O O,flight
+cleveland'dan memphis'e uçuşları listele,B-fromloc.city_name B-toloc.city_name O O,flight
+memphis'ten cleveland'a uçuşları listele,B-fromloc.city_name B-toloc.city_name O O,flight
+ilk temmuzda varan denver baltimore uçuşlarını listele,B-arrive_date.day_number B-arrive_date.month_name O B-fromloc.city_name B-toloc.city_name O O,flight
+dallas'tan baltimore'a ilk temmuz varışlı uçuşları listele,B-fromloc.city_name B-toloc.city_name B-arrive_date.day_number B-arrive_date.month_name O O O,flight
+pittsburgh'dan baltimore'a ilk temmuz'da varan uçuşları listele,B-fromloc.city_name B-toloc.city_name B-arrive_date.day_number B-arrive_date.month_name O O O,flight
+kanada havayolları uluslararası uçuşlarını listele,B-airline_name I-airline_name I-airline_name O O,flight
+kaç kanada havayolları uluslararası uçuşlar j31 kullanıyor,O B-airline_name I-airline_name I-airline_name O B-aircraft_code O,quantity
+kaç kanadalı havayolu uluslararası uçuşlarda uçak kullanıyor 320,O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code,quantity
+kaç kanada havayolları uçuşu dh8 uçağı kullanıyor,O B-airline_name I-airline_name O B-aircraft_code O O,quantity
+st petersburg'dan ontario kanada'ya bir mola ile st louis'den uçan amerikan havayollarının uçuşlarını göster,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-toloc.country_name O O O B-stoploc.city_name I-stoploc.city_name O B-airline_name I-airline_name O O,flight
+amerikan havayollarının st petersburg'dan ontario california'ya st louis'den kalkan uçuşlarını göster,B-airline_name I-airline_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-toloc.state_name B-stoploc.city_name I-stoploc.city_name O O O,flight
+ontario california'ya en yakın havaalanı hangisi,B-city_name B-state_name B-mod I-mod O O,airport
+bana houston orlando arası uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O O,flight
+bana orlando houston uçuşlarını göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+bana detroit'ten las vegas'a uçuşları göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+bana las vegas'tan detroit'e en ucuz gidiş dönüş otobüs ücretini göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-class_type I-class_type B-round_trip I-round_trip O O O,airfare
+las vegas'tan detroit'e twa'da en ucuz gidiş dönüş otobüs ücretini göster,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-airline_code B-class_type I-class_type B-round_trip I-round_trip O O O,airfare
+bana en ucuz yolculara atıştırmalık ikram edilen delta uçuşlarını göster,O B-compartment I-compartment O B-meal_description O O B-airline_name O O,flight
+yemek kodu nedir sb,O O O B-meal_code,abbreviation
+sabah saat 950'de san francisco'ya gelen 468 dl'de hangi yemekler mevcut,O O B-arrive_time.time B-toloc.city_name I-toloc.city_name O B-flight_number B-airline_code O B-meal O,meal
+bana tampa'dan san francisco'ya delta uçuşlarını göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-airline_name O O,flight
+486 numaralı delta uçuşunu göster,B-flight_number O B-airline_name O O,flight
+pazartesi günleri kule hava uçuşlarını listele,B-day_name O B-airline_name I-airline_name O O,flight
+yemeklerle birlikte tüm kule hava uçuşlarını listele,B-meal O O B-airline_name I-airline_name O O,flight
+baltimore'dan hangi uçuşlar kalkıyor,B-fromloc.city_name O O O,flight
+hangi uçuşlar baltimore'dan kalkıyor ve cuma günü san francisco'ya varıyor,O O B-fromloc.city_name O O B-arrive_date.day_name O B-toloc.city_name I-toloc.city_name O,flight
+sabahları cincinnati'den hangi uçuşlar kalkıyor ve tampa'ya varıyor,B-depart_time.period_of_day B-fromloc.city_name O O O O B-toloc.city_name O,flight
+hangi uçuşlar tampa'dan kalkıyor ve akşamları cincinnati'ye varıyor,O O B-fromloc.city_name O O B-arrive_time.period_of_day B-toloc.city_name O,flight
+hangi uçuşlar akşamın erken saatlerinde tampa'dan kalkıyor ve cincinnati'ye varıyor,O O B-depart_time.period_of_day B-depart_time.period_of_day O B-fromloc.city_name O O B-toloc.city_name O,flight
+hangi uçuşlar philadelphia'dan kalkıyor ve atlanta'ya varıyor,O O B-fromloc.city_name O O B-toloc.city_name O,flight
+hangi uçuşlar atlanta'dan kalkıyor ve toronto'ya varıyor,O O B-fromloc.city_name O O B-toloc.city_name O,flight
+hangi uçuşlar toronto'dan kalkıyor ve washington dc'ye varıyor,O O B-fromloc.city_name O O B-toloc.city_name B-toloc.state_code O,flight
+hangi uçuşlar new york'tan kalkıyor ve saat 10'dan sonra los angeles'a varıyor,O O B-fromloc.city_name I-fromloc.city_name O O B-arrive_time.time B-arrive_time.time B-arrive_time.time_relative B-toloc.city_name I-toloc.city_name O,flight
+new york'un la guardia şehir merkezine ne kadar uzakta,B-city_name I-city_name B-airport_name I-airport_name O O O O O,distance
+toronto uluslararası şehir merkezine ne kadar uzaklıkta,B-airport_name I-airport_name O O O O O,distance
+los angeles uluslararası şehir merkezine ne kadar uzaklıktadır,B-airport_name I-airport_name I-airport_name O O O O O,distance
+san francisco uluslararası şehir merkezine ne kadar uzaklıkta,B-airport_name I-airport_name I-airport_name O O O O O,distance
+boston'da limuzin servisi ne kadar,B-city_name B-transport_type O O O,ground_fare
+la guardia'da bir limuzin servisi ne kadar,B-airport_name I-airport_name O B-transport_type O O O,ground_fare
+toronto uluslararası bir limuzin servisi ne kadar,B-airport_name I-airport_name O B-transport_type O O O,ground_fare
+los angeles'ta limuzin servisi ne kadar,B-city_name I-city_name B-transport_type O O O,ground_fare
+washington dc ve columbus ohio arasında hangi havayolları uçuyor,B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name B-toloc.state_name O O O O,airline
+washington dc ile columbus ohio arasında hangi uçuşlar var,B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name B-toloc.state_name O O O O,flight
+washington dc ile columbus ohio arasındaki uçuşlar nelerdir,B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name B-toloc.state_name O O O,flight
+washington ve columbus arasındaki tüm uçuşların ücretleri nedir,B-fromloc.city_name O B-toloc.city_name O O O O O,airfare
+charlotte havaalanında us air için kaç farklı uçak türü var,B-city_name I-city_name B-airline_name I-airline_name O O O O O O,aircraft
+cumartesi günü saat 1'de charlotte'a gelen tüm us air uçuşlarını listeleyin,B-arrive_date.day_name O O B-arrive_time.time B-toloc.city_name O O B-airline_name I-airline_name O O,flight
+hindistan indianapolis'ten memphis'e birinci sınıf gidiş dönüş uçak bileti ücreti nedir,O B-fromloc.city_name B-toloc.city_name B-class_type I-class_type B-round_trip I-round_trip O O O O,airfare
+memphis'ten miami'ye tüm uçuşları listele,B-fromloc.city_name B-toloc.city_name O O O,flight
+bir pazartesi sabahı indianapolis'ten memphis'e tüm uçuşları ve ücretlerini listele,O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O O O O,flight+airfare
+bir çarşamba akşamı memphis'ten miami'ye tüm uçuşları ve ücretlerini listeleyin,O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O O O O,flight+airfare
+miami ve indianapolis arasındaki tüm uçuşlar için tüm uçuşları ve ücretlerini listeleyin,B-fromloc.city_name O B-toloc.city_name O O O O O O O O O,flight+airfare
+pazartesi cleveland'dan kansas city'e tüm uçuşları listele,B-depart_date.day_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+kansas city'den cleveland'a tüm uçuşları listele,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+cleveland'dan nashville'e tüm uçuşları listele,B-fromloc.city_name B-toloc.city_name O O O,flight
+pazar günü nashville cleveland arasındaki tüm uçuşları listele,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O O O,flight
+cleveland'dan nashville'e tüm pazar uçuşlarını ve ücretlerini listele,B-fromloc.city_name B-toloc.city_name O B-depart_date.day_name O O O O,flight+airfare
+hangi havayolları baltimore'dan kalkıyor,O O B-fromloc.city_name O,airline
+hangi havayolları baltimore'dan san francisco'ya uçuyor,O O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O,airline
+baltimore san francisco uçuşu ne kadar sürüyor,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O,distance
+erken pazartesi sabahı kansas city'den atlanta'ya hangi uçaklar kalkıyor,B-depart_time.period_mod B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+hangi uçuşlar atlanta'dan ayrılıyor ve st louis salı günü saat 230'a yakın,O O B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name B-arrive_date.day_name O O B-arrive_time.time B-arrive_time.time_relative,flight
+lütfen st louis'den st paul'e perşembe sabahı 10'dan sonra hareket eden uçuşları listeleyin,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day B-depart_time.time B-depart_time.time_relative O O O O,flight
+st paul'den kansas city'e cuma akşamı yemek dahil uçuşları listele,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day B-meal O O O,flight
+cincinnati'den tampa'ya sabah erken uçuşları listele,B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day B-depart_time.period_of_day O O,flight
+tampa'dan cincinnati'ye akşam erken uçuşları listele,B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day B-depart_time.period_of_day O O,flight
+tampa'dan cincinnati'ye akşam uçuşlarını listele,B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day O O,flight
+philadelphia'dan atlanta cuma am uçuşları listele,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O O,flight
+cuma öğleden sonra atlanta'dan toronto'ya uçuşları listele,B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O,flight
+cumartesi am toronto'dan washington dc'ye uçuşları listele,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name B-toloc.state_code O O,flight
+washington dc'den philadelphia cumartesi öğleden sonra uçuşları listele,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day O O,flight
+sabah 10'dan sonra new york'tan los angeles'a direkt uçuşları listele,B-depart_time.time B-depart_time.time B-depart_time.time_relative B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-connect O O,flight
+amerikan havayollarının jfk'den lax'a 19 numaralı uçuşu için uçak biletini listele,B-airline_name I-airline_name B-fromloc.airport_code B-toloc.airport_code B-flight_number O O O O O O,airfare+flight
+ücret kodu m nedir,O O B-fare_basis_code O,abbreviation
+boston havaalanından boston şehir merkezine olan mesafeyi mil cinsinden listeleyin,B-fromloc.airport_name I-fromloc.airport_name B-city_name O O O O O O O,distance
+new york'un la guardia havaalanından new york şehir merkezine olan mesafeyi mil cinsinden listeleyin,B-city_name I-city_name B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name B-city_name I-city_name O O O O O O O,distance
+toronto uluslararası havaalanından toronto şehir merkezine olan mesafeyi mil cinsinden listeleyin,B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name B-city_name O O O O O O O,distance
+san francisco uluslararası havaalanından san francisco şehir merkezine olan mesafeyi mil cinsinden listeleyin,B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name B-toloc.city_name I-toloc.city_name O O O O O O O,distance
+boston şehri için limuzin fiyatlarını listele,B-city_name I-city_name O B-transport_type O O,ground_fare
+amerikan havayollarının houston'dan milwaukee'ye cuma öğleden sonra kalkan uçuşlarını listele,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day O O O,flight
+houston milwaukee cuma pm uçuşlarını listele,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O O,flight
+amerikan havayolları milwaukee san jose çarşamba uçuşlarını listele,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name O O,flight
+amerikan havayolları san jose dallas cuma öğleden sonra uçuşlarını listele,B-airline_name I-airline_name B-fromloc.city_name B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day O O,flight
+dallas'tan houston'a pazar öğleden sonra gelen uçuşları listele,B-fromloc.city_name B-toloc.city_name B-arrive_date.day_name B-arrive_time.period_of_day I-arrive_time.period_of_day O O O,flight
+seattle'dan salt lake city'e uçan havayolları listesi,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O,airline
+uçak l10 için oturma kapasitesi nedir,O B-aircraft_code O O O O,capacity
+delta be1 oturma kapasitesi nedir,B-airline_name B-aircraft_code O O O,capacity
+delta l10'da seattle'dan salt lake city'e uçuşları listele,B-airline_name B-aircraft_code B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O,flight
+delta be1'de seattle'dan salt lake city'e uçuşları listele,B-airline_name B-aircraft_code B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O,flight
+boston'dan pittsburgh'a günlük uçuşları listele,B-fromloc.city_name B-toloc.city_name B-flight_days O O,flight
+pittsburgh'dan newark'a günlük uçuşları listele,B-fromloc.city_name B-toloc.city_name B-flight_days O O,flight
+newark'tan boston'a günlük uçuşları listele,B-fromloc.city_name B-toloc.city_name B-flight_days O O,flight
+cumartesi günü charlotte havaalanından saat 1'de kalkan us air uçuşlarını listele,B-depart_date.day_name O B-fromloc.airport_name I-fromloc.airport_name O B-depart_time.time O B-airline_name I-airline_name O O,flight
+cumartesi saat 1 civarında charlotte havaalanından kalkan us air uçuşlarını listeleyin,B-depart_date.day_name O B-depart_time.time B-depart_time.time_relative B-fromloc.airport_name I-fromloc.airport_name O B-airline_name I-airline_name O O,flight
+indianapolis'ten memphis'e gidiş dönüş birinci sınıf uçak bileti listesi,B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip B-class_type I-class_type O O O,airfare
+ücret kodu f nedir,O O B-fare_basis_code O,abbreviation
+memphis'ten miami'ye çarşamba akşamı uçuşları listele,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O O,flight
+miami'den indianapolis'e pazar uçuşlarını listele,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name O O,flight
+ontario california'dan orlando florida'ya uçuşları listele,B-fromloc.city_name B-fromloc.state_name B-toloc.city_name B-toloc.state_name O O,flight
+ontario california'dan salt lake city utah'a uçuşları listele,B-fromloc.city_name B-fromloc.state_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-toloc.state_name O O,flight
+pazartesi ontario california'dan salt lake city utah'a uçuşları listele,B-depart_date.day_name B-fromloc.city_name B-fromloc.state_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-toloc.state_name O O,flight
+pazartesi salt lake city utah'tan phoenix arizona'ya uçuşları listele,B-depart_date.day_name B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-fromloc.state_name B-toloc.city_name B-toloc.state_name O O,flight
+salı günü salt lake city'den phoenix arizona'ya uçuşları listele,B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-toloc.state_name O O,flight
+phoenix arizona'dan ontario california çarşambaya uçuşları listele,B-fromloc.city_name B-fromloc.state_name B-toloc.city_name B-toloc.state_name B-depart_date.day_name O O,flight
+hangi havayolları baltimore'dan san francisco'ya uçuyor,O O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O,airline
+detroit'ten st petersburg'ye birinci sınıf gidiş dönüş biletinin ücreti nedir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-class_type I-class_type B-round_trip I-round_trip O O O,airfare
+detroit'ten st petersburg'ye gidiş dönüş birinci sınıf biletin uçak bileti ücreti nedir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-round_trip I-round_trip B-class_type I-class_type O O O O O,airfare
+kansas city atlanta pazartesi sabah uçuşları,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O,flight
+atlanta'dan kansas şehrine pazartesi sabahı uçuşları,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O,flight
+kansas city atlanta pazartesi sabah uçuşları,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O,flight
+atlanta'dan st louis salı 230 pm uçuşlarından önce,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.time I-depart_time.time O B-depart_time.time_relative,flight
+st louis'den st paul perşembe saat 10'dan sonra,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.time B-depart_time.time B-depart_time.time_relative,flight
+st paul'dan kansas şehrine cuma gecesi,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day,flight
+cleveland'dan kansas şehrine pazartesi 3'ten önce varır,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-arrive_date.day_name B-arrive_time.time B-arrive_time.time_relative O,flight
+kansas city cleveland uçuşu çarşamba 1700'den önce varıyor,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O B-arrive_date.day_name B-arrive_time.time B-arrive_time.time_relative O,flight
+cleveland nashville uçuşu cuma sabahı,B-fromloc.city_name B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day,flight
+pazar 9'dan önce nashville'den cleveland'a,B-depart_date.day_name B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name,flight
+pazartesi sabahı pittsburgh newark'a birinci sınıf uçuşlar,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name B-class_type I-class_type O,flight
+çarşamba sabahı newark los angeles uçuşları,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name O,flight
+los angeles'tan minneapolis'e perşembe öğleden sonra,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day,flight
+minneapolis pittsburgh uçuşu,B-fromloc.city_name B-toloc.city_name O,flight
+minneapolis pittsburgh birinci sınıf uçuş,B-fromloc.city_name B-toloc.city_name B-class_type I-class_type O,flight
+milwaukee'den orlando'ya uçuşlar istiyorum,B-fromloc.city_name B-toloc.city_name O O,flight
+hp ne anlama geliyor,B-airline_code O O O,abbreviation
+ontario'dan tacoma'ya uçuş istiyorum,B-fromloc.city_name B-toloc.city_name O O,flight
+minneapolis'ten san diego'ya uçuş istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+salt lake city'den cincinnati'ye uçak bileti istiyorum,B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+cincinnati'den salt lake city'e uçuşları görmek istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O,flight
+new york'tan miami'ye uçak bileti istiyorum,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+miami'den new york'a uçak bileti istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+san diego için san francisco'dan kalkan bir uçak istiyorum,B-toloc.city_name I-toloc.city_name O B-fromloc.city_name I-fromloc.city_name O O O O,flight
+san diego'dan las vegas'a uçuş istiyorum,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+san diego'dan las vegas'a bir uçuş istiyorum,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+las vegas'tan san francisco'ya uçak bileti istiyorum,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+ücret kodu bn ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+toronto detroit ve st louis'ye uçan havayoluna sahip olmak istiyorum,B-fromloc.city_name B-toloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O,airline
+toronto'dan detroit'e bir uçuş istiyorum,B-fromloc.city_name B-toloc.city_name O O O,flight
+detroit'ten st louis'ye bir uçuş istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+toronto'dan st louis'ye bir uçuş istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+san francisco'dan long beach'e uçuşlar istiyorum,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+san francisco'dan san diego'ya uçuşlar istiyorum,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+san francisco'dan st petersburg'ye bir uçuş istiyorum,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+bana milwaukee'den orlando'ya çarşamba öğleden sonra saat 1800'den sonra kalkan tek yönlü bir uçuş göster,O B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day B-depart_time.time_relative O B-depart_time.time B-depart_time.time_relative O B-round_trip I-round_trip O O O,flight
+çarşamba milwaukee'den orlando'ya tek yön uçuşları göster,B-depart_date.day_name B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O,flight
+bana columbus'tan chicago'ya saat 10'dan önce kalkan birinci sınıf uçuşları göster,O B-fromloc.city_name B-toloc.city_name B-depart_time.time B-depart_time.time B-depart_time.time_relative O B-class_type I-class_type O O,flight
+bana en ucuz gidiş dönüş st petersburg'dan detroit'e 1900'dan önce varan uçuş göster,O B-cost_relative I-cost_relative B-round_trip I-round_trip B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-arrive_time.time B-arrive_time.time_relative O O O,flight
+kansas city'den phoenix'e aktarmasız uçuşları göster,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-flight_stop O O,flight
+havayolu wn nedir,O B-airline_code O,airline
+bana new york'tan miami'ye en ucuz birinci sınıf gidiş dönüş biletini göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-class_type I-class_type B-round_trip I-round_trip O O,flight
+şimdi bana new york'tan miami'ye tüm gidiş dönüşleri göster,O O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O B-round_trip I-round_trip O,flight
+bana san francisco'dan houston'a en ucuz tek yön uçuşu göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O,flight
+şimdi bana houston'dan boston'a en ucuz tek yön uçuşunu göster,O O B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O,flight
+bana houston'dan boston'a en ucuz gidiş dönüş biletlerini göster,O B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O,airfare
+bana san francisco'dan houston'a en ucuz gidiş dönüş biletlerini göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O,airfare
+bana yirmi sekiz şubat 1994'te san francisco'dan houston'a en ucuz gidiş dönüş ücretini göster,O B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_date.year B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O,airfare
+bana yirmi sekiz şubat 1994'te san francisco'dan houston'a en ucuz tek yön bileti göster,O B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_date.year B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O,airfare
+şimdi pazartesi öğleden sonra bana houston'da kara ulaşımını göster,O B-day_name B-period_of_day I-period_of_day O B-city_name O O O,ground_service
+şimdi bana houston'dan boston'a tek yön uçuşları göster,O O B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O,flight
+ve şimdi bana gece geç saatlerde boston'a gidebileceğim kara ulaşımını göster,O O O B-period_of_day B-period_of_day O B-city_name O O O O,ground_service
+bana toronto ile detroit arasında detroit ile st louis arasında ve st louis ile toronto arasında uçuşu olan havayollarını göster,O B-toloc.city_name O B-fromloc.city_name O B-fromloc.city_name O B-fromloc.city_name I-fromloc.city_name O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O,airline
+delta kuzeybatı us air ve birleşik havayolları toronto'dan detroit'e gidiş dönüş ücretlerini göster,B-airline_name B-airline_name B-airline_name I-airline_name O B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O,airfare
+bana detroit ve st louis arasındaki delta kuzeybatı us air ve birleşik havayolları üzerinde uçuşları göster,O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-airline_name B-airline_name B-airline_name I-airline_name O B-airline_name I-airline_name O O O,flight
+bana montreal'den orlando ve long beach'e uçuşları göster,O B-fromloc.city_name B-toloc.city_name O B-toloc.city_name I-toloc.city_name O O,flight
+bana montreal orlando uçuşlarını göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+haziranda cuma öğleden sonra new york'tan cleveland'a uçağa ihtiyacım var,B-depart_date.month_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+cumartesi akşamı bize us air ile new york'tan los angeles'a bir uçağa ihtiyacım var,B-depart_date.day_name B-depart_time.period_of_day O B-airline_name I-airline_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O,flight
+cumartesi akşamı us air'de new york'tan los angeles'a kırmızı göz uçuşu istiyorum,B-depart_date.day_name B-depart_time.period_of_day B-airline_name I-airline_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_mod I-flight_mod O O,flight
+cumartesi sabahı us air ile new york'tan los angeles'a bir uçuş istiyorum,B-depart_date.day_name B-depart_time.period_of_day B-airline_name I-airline_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+pazartesi sabahı san francisco'dan milwaukee'ye bir uçağa ihtiyacım var,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O,flight
+ne demek istiyorsun,O O B-airline_code,abbreviation
+pazartesi gecesi milwaukee'den washington dc'ye bir uçuşa ihtiyacım var,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name B-toloc.state_code O O O O,flight
+salı sabahları milwaukee'den washington dc'ye uçuşlara ne dersiniz,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name B-toloc.state_code O O O,flight
+salı sabahı milwaukee'den washington dc'ye 382 numaralı uçuşta hangi yemekler var,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name B-toloc.state_code B-flight_number O O O B-meal O,meal
+washington dc'de bir araba kiralamam gerekecek,B-city_name B-state_code O B-transport_type O O,ground_service
+salı gecesi washington dc'den oakland'a uçabilir miyim,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-fromloc.state_code B-toloc.city_name O O,flight
+çarşamba sabahı dc'den oakland'a gitmeye ne dersiniz,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.state_code B-toloc.city_name O O O,flight
+columbus'tan milwaukee'ye twa ile uçmanın maliyeti nedir,B-fromloc.city_name B-toloc.city_name B-airline_code O O O O,airfare
+q ne anlama geliyor,B-fare_basis_code O O O,abbreviation
+columbus'tan st louis'ye twa'da gidiş dönüş yolculuğu uçmanın maliyeti nedir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-airline_code B-round_trip I-round_trip O O O O,airfare
+columbus'tan st louis'ye gidiş dönüş en ucuz uçak bileti twa'da,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-round_trip I-round_trip B-cost_relative I-cost_relative O O B-airline_code,flight
+twa'da columbus'tan st paul'ye en ucuz gidiş dönüş uçuş hangisidir,B-airline_code B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O,flight
+milwaukee'den los angeles'a uçmak istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+milwaukee'den orlando'ya en kısa uçuşu alabilir miyim,B-fromloc.city_name B-toloc.city_name B-flight_mod I-flight_mod O O O,flight
+milwaukee'den long beach'e en kısa uçuş hangisidir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_mod I-flight_mod O O,flight
+m ne anlama geliyor,B-fare_basis_code O B-fare_basis_code O,abbreviation
+ap 57 ne demek,B-restriction_code I-restriction_code O O,abbreviation
+milwaukee'den st petersburg'ye en kısa uçuş hangisidir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_mod I-flight_mod O O,flight
+milwaukee'den long beach'e en kısa uçuş hangisidir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_mod I-flight_mod O O,flight
+milwaukee'den san diego'ya en kısa uçuş hangisidir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_mod I-flight_mod O O,flight
+ap 20 ne anlama geliyor,B-restriction_code I-restriction_code O O O,abbreviation
+bugün san francisco'dan detroit michigan'a bir uçuş alabilir miyim,B-depart_date.today_relative B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-toloc.state_name O O O O,flight
+bugün san francisco'dan detroit'e en ucuz uçak bileti ne kadar,B-depart_date.today_relative B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative O O O O,flight
+san francisco'dan milwaukee'ye ve milwaukee'den denver'a uçmak istiyorum,B-fromloc.city_name I-fromloc.city_name B-fromloc.city_name O B-fromloc.city_name B-toloc.city_name O O,flight
+san francisco'dan milwaukee'ye en ucuz uçak bileti,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative O O,flight
+milwaukee'de araba kiralamam gerekiyor,B-city_name B-transport_type O O,ground_service
+milwaukee'den denver'a yarın en ucuz uçak bileti ne kadar,B-fromloc.city_name B-toloc.city_name B-depart_date.today_relative B-cost_relative I-cost_relative O O O O,flight
+denver'da hangi kara taşımacılığı mevcuttur,B-city_name O O O O,ground_service
+san francisco'dan denver'a en ucuz uçak bileti,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative O O,flight
+hangi uçuşlar cleveland'dan kalkıyor ve dallas'a gidiyor,O O B-fromloc.city_name O O B-toloc.city_name O,flight
+st petersburg'dan charlotte'a tüm aktarmasız uçuşları göster,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O B-flight_stop O O,flight
+hangi havayolu us,O O B-airline_code,airline
+bana toronto ve san diego arasındaki uçuşları göster,O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O,flight
+phl nedir,B-airport_code O,abbreviation
+mci nedir,B-airport_code O,abbreviation
+bana oakland ve salt lake city arasındaki uçuşları göster,O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O,flight
+sa ne anlama gelmiyor,B-days_code O O O,abbreviation
+oakland ve salt lake city arasındaki en erken günlük uçuş nedir,B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O B-flight_mod I-flight_mod B-flight_days O O,flight
+hangi havayolu dl,O O B-airline_code,airline
+oakland ve salt lake city arasındaki en son günlük uçuş nedir,B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O B-flight_mod B-flight_mod B-flight_days O O,flight
+bana los angeles ve dallas arasındaki uçuşları göster,O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O,flight
+dallas fort worth havaalanından dallas şehir merkezine hangi karayolu ulaşımı mevcuttur,B-airport_name I-airport_name I-airport_name I-airport_name B-city_name O O O O O O,ground_service
+bir l1011 uçağı kaç yolcu alabilir,O B-aircraft_code O O O O,capacity
+bir dc9'un oturma kapasitesi nedir,O B-aircraft_code O O O,capacity
+dallas ve phoenix arasındaki uçuşlar nelerdir,B-fromloc.city_name O B-toloc.city_name O O O,flight
+phoenix havaalanı ve şehir phoenix arasında hangi kara ulaşımı mevcuttur,B-airport_name I-airport_name O O B-city_name O O O O O,ground_service
+m80 uçağının oturma kapasitesi nedir,B-aircraft_code O O O O,capacity
+dallas ve phoenix arasında dc10 uçağı kullanan herhangi bir uçuş var mı,B-fromloc.city_name O B-toloc.city_name O B-aircraft_code O O O O O O O,flight
+aa hangi havayolu,B-airline_code O O,airline
+bana milwaukee ile indiana arasındaki uçuşları göster,O B-fromloc.city_name O B-toloc.state_name O O O,flight
+milwaukee pittsburgh uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name O O,flight
+pittsburgh havaalanı ile pittsburgh şehir merkezi arasında hangi karayolu ulaşımı mevcuttur,B-airport_name I-airport_name O B-city_name O O O O O O O,ground_service
+bana pittsburgh ve washington dc arasındaki uçuşları göster,O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O O O,flight
+dca ve washington şehir merkezi arasında hangi karayolu ulaşımı mevcuttur,B-airport_code O B-city_name O O O O O O O,ground_service
+dca ile milwaukee arasındaki uçuşlar nelerdir,B-airport_code O B-city_name O O O,flight
+milwaukee havaalanı ile milwaukee şehir merkezi arasında hangi kara ulaşımı mevcuttur,B-airport_name I-airport_name O B-city_name O O O O O O O,ground_service
+cleveland'dan dallas'a öğleden önce kalkan bir uçuşta kullanılan uçağın türünü belirlemek,B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day B-depart_time.time_relative O O O O O O O,aircraft
+st petersburg ve charlotte arasında bir uçuş bulun uçuş öğleden sonra kalkmalı ve mümkün olan en kısa sürede 1700'den sonra varmalıdır aktarmasız bir uçuş olmalıdır,B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O B-depart_time.period_of_day B-arrive_time.time_relative O O O O O O O B-arrive_time.time B-arrive_time.time_relative O B-flight_stop O O O,flight
+toronto'dan san diego'ya delta havayollarında bir uçuş listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-airline_name I-airline_name O O O,flight
+toronto'dan san diego'ya amerikan havayollarında bir uçuş listesi,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-airline_name I-airline_name O O O,flight
+toronto'dan san diego'ya uçuş listesi,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+oakland'dan salt lake city'e 1700 çarşambadan sonra kalkan uçuşları listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-depart_time.time B-depart_date.day_name B-depart_time.time_relative O O O,flight
+perşembe gece yarısından sonra oakland'dan salt lake city'e uçuşları listele,B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O,flight
+phoenix ve las vegas arasındaki uçuşları listele,B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O,flight
+las vegas'dan denver'a uçuşları listele,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+milwaukee'den washington dc'ye 1200'den önceki uçuşları listele,B-fromloc.city_name B-toloc.city_name B-toloc.state_code B-depart_time.time B-depart_time.time_relative O O,flight
+washington dc'den pittsburgh'a 1800'den sonra kalkan uçuşları listele,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name B-depart_time.time B-depart_time.time_relative O O O,flight
+washington dc'den pittsburgh'a uçuşları listele,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name O O,flight
+pittsburgh ve milwaukee arasındaki uçuşları listele,B-fromloc.city_name O B-toloc.city_name O O O,flight
+washington dc'den san diego'ya bir uçuş istiyorum,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name I-toloc.city_name O O O,flight
+cleveland'dan dallas'a uçmak istiyorum,B-fromloc.city_name B-toloc.city_name O O,flight
+washington dc'den phoenix arizona'ya uçmak istiyorum,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name B-toloc.state_name O O,flight
+phoenix'ten atlanta'ya bir uçuşa ihtiyacım var,B-fromloc.city_name B-toloc.city_name O O O O,flight
+atlanta'dan san diego'ya uçmak istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+san diego'dan seattle'a uçmak istiyorum,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+orlando'dan kansas şehrine uçmak istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+kansas city'den minneapolis'e bir uçuşa ihtiyacım var,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O,flight
+san diego'dan washington dc'ye bir uçuşa ihtiyacım var,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-toloc.state_code O O O O,flight
+washington dc'den san diego'ya bir uçuşa ihtiyacım var,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name I-toloc.city_name O O O O,flight
+san diego'dan washington dc'ye gidiş dönüş bir uçağa ve ücretlere ihtiyacım var,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-toloc.state_code B-round_trip I-round_trip O O O O O O,flight+airfare
+atlanta'dan washington dc'ye bir gidiş dönüş yolculuğuna ve sabah kalkacak olan ücretlere ihtiyacım var,B-fromloc.city_name B-toloc.city_name B-toloc.state_code O B-round_trip I-round_trip O O B-depart_time.period_of_day O O O O O,flight+airfare
+phoenix'ten washington dc'ye bir gidiş dönüş yolculuğuna ve sabah kalkacak ücrete ihtiyacım var,B-fromloc.city_name B-toloc.city_name B-toloc.state_code O B-round_trip I-round_trip O O B-depart_time.period_of_day O O O O,flight+airfare
+washington dc'den boston'a en düşük uçak bileti ücreti ne kadar,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name B-cost_relative I-cost_relative O O O O O,airfare
+washington dc'den montreal'e en düşük ücret nedir,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name B-cost_relative I-cost_relative O O,airfare
+toronto'dan washington dc'ye en düşük ücret nedir,B-fromloc.city_name B-toloc.city_name B-toloc.state_code B-cost_relative I-cost_relative O O,airfare
+montreal'den washington dc'ye bir uçuş istiyorum,B-fromloc.city_name B-toloc.city_name B-toloc.state_code O O O,flight
+nashville'den seattle'a en geç saat 3'te varan bir uçuş istiyorum,B-fromloc.city_name B-toloc.city_name B-arrive_time.time_relative I-arrive_time.time_relative B-arrive_time.time B-arrive_time.time O O O O,flight
+memphis'ten seattle'a en geç saat 3'te varan bir uçuş istiyorum,B-fromloc.city_name B-toloc.city_name B-arrive_time.time_relative I-arrive_time.time_relative B-arrive_time.time B-arrive_time.time O O O O,flight
+indianapolis'ten seattle'a 1205'te seattle'a varan bir uçağa ihtiyacım var,B-fromloc.city_name B-toloc.city_name B-arrive_time.time B-toloc.city_name O O O O O,flight
+memphis'ten seattle'a gidiş dönüş bir uçak yolculuğu istiyorum,B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O O O,flight
+nashville'den seattle'a uçmak istiyorum ve gidiş dönüş en ucuz ücreti istiyorum,B-fromloc.city_name B-toloc.city_name O O O B-round_trip I-round_trip B-cost_relative I-cost_relative O O,flight
+memphis'ten seattle'a gidiş dönüş en ucuz biletle uçmak istiyorum,B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip B-cost_relative I-cost_relative O O O,flight
+indianapolis'ten seattle'a gidiş dönüş en ucuz uçak bileti ile uçmak istiyorum,B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip B-cost_relative I-cost_relative O O O O O,flight
+lütfen orlando'dan philadelphia'ya uçuşları listeleyin,O B-fromloc.city_name B-toloc.city_name O O,flight
+lütfen san francisco'dan charlotte'a uçuşları listeleyin,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+lütfen milwaukee'den philadelphia'ya uçuşları listeleyin,O B-fromloc.city_name B-toloc.city_name O O,flight
+lütfen philadelphia'dan san francisco'ya uçuşları listeleyin,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+lütfen milwaukee'ye kara ulaşımını gösterin,O B-city_name O O O,ground_service
+lütfen san francisco'dan milwaukee'ye uçuşları listeleyin,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+houston'dan denver'a uçuşları listele,B-fromloc.city_name B-toloc.city_name O O,flight
+houston'dan phoenix'e uçuşları listele,B-fromloc.city_name B-toloc.city_name O O,flight
+phoenix'den houston'a uçuşları listele,B-fromloc.city_name B-toloc.city_name O O,flight
+newark'tan houston'a uçuşları listele,B-fromloc.city_name B-toloc.city_name O O,flight
+denver'dan houston'a uçuşları göster,B-fromloc.city_name B-toloc.city_name O O,flight
+uçuşları göster st petersburg'dan charlotte'a,O O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name,flight
+orlando'dan kansas city'e uçuşları göster,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+kansas city'den minneapolis'e uçuşları göster,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+kansas city'den orlando'ya uçuşları göster,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+minneapolis'ten kansas city'e uçuşları göster,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+kansas city'den orlando'ya uçuşları göster,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+washington dc'den boston'a uçuşları listele,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name O O,flight
+washington dc'den montreal'e fiyatları listeleyin,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name O O,airfare
+washington dc'den montreal'e uçuşları listele,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name O O,flight
+washington dc'den toronto'ya iyi olması gereken ücretleri listeleyin,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name O O O O O,airfare
+washington dc'den boston'a fiyatları listeleyin,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name O O,airfare
+washington dc'den montreal'e uçuşları listele,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name O O,flight
+washington dc'den toronto'ya uçuşları listele,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name O O,flight
+toronto'dan washington dc'ye uçuşları listele,B-fromloc.city_name B-toloc.city_name B-toloc.state_code O O,flight
+oakland'dan salt lake city'e uçuşları listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O,flight
+dallas'tan phoenix'e hangi uçuşlar var,B-fromloc.city_name B-toloc.city_name O O O,flight
+anka kuşundan salt lake city'e hangi uçuşlar gider,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O,flight
+milwaukee'den denver'a erken bir uçağa ihtiyacım var,B-fromloc.city_name B-toloc.city_name B-flight_mod O O O O,flight
+denver'da ne tür kara taşımacılığı mevcuttur,B-city_name O O O O O,ground_service
+denver'dan st louis'ye salı sabahı hangi uçuşlar var,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O O O,flight
+kara ulaşımı st louis,O O B-city_name I-city_name,ground_service
+st louis'ten milwaukee'ye çarşamba öğleden sonra uçmaya ihtiyacım var,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day O O O,flight
+washington'dan seattle'a uçuşlar,B-fromloc.city_name B-toloc.city_name O,flight
+atlanta'dan seattle'a uçuşlar,B-fromloc.city_name B-toloc.city_name O,flight
+san diego'dan seattle'a uçuşlar,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O,flight
+phoenix'den denver'a uçuş bilgileri istiyorum,B-fromloc.city_name B-toloc.city_name O O O,flight
+salt lake city'den phoenix'e uçuşlar için uçuş bilgisi alabilir miyim lütfen,B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O O O O,flight
+pittsburgh anka kuşu uçuşları için uçuş bilgisi alabilir miyim lütfen,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O O O O,flight
+washington dc'den denver'a kalkan uçuşlar hakkında bilgi istiyorum,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name O O O O O,flight
+washington'dan boston'a cumartesi günü kalkan uçuşlar hakkında bilgiye ihtiyacım var,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name O O O O O O O,flight
+cumartesi günü washington'dan montreal'e uçuşlara ihtiyacım var,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O O,flight
+cumartesi günü washington'dan toronto'ya uçuşların ücretlerine ihtiyacım var,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O O O,airfare
+bir cumartesi boston'dan washington'a gitmek istiyorum,O B-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O,flight
+cleveland'dan dallas'a öğleden önce kalkan bir uçağa ihtiyacım var bakalım çok fazla bilgi var mı,B-fromloc.city_name B-toloc.city_name B-depart_time.time B-depart_time.time_relative O O O O O O O O O O O,flight
+washington'dan boston'a bilet alın,B-fromloc.city_name B-toloc.city_name O O,airfare
+washington'dan boston'a cumartesi fiyatları alın,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name O O,airfare
+washington'dan montreal'e bilet alın,B-fromloc.city_name B-toloc.city_name O O,airfare
+washington'dan montreal'e cumartesi fiyatları,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name O,airfare
+washington'dan toronto'ya cumartesi fiyatları alın,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name O O,airfare
+washington'dan toronto'ya cumartesi ücretini al,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name O O,airfare
+washington'dan boston'a cumartesi uçuşları listesi,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name O O,flight
+boston'dan washington'a cumartesi uçuşları listesi,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name O O,flight
+milwaukee'den dtw'ye uçak bileti ara,B-fromloc.city_name B-toloc.airport_code O O O,flight
+milwaukee'den detroit'e uçuşları listele,B-fromloc.city_name B-toloc.city_name O O,flight
+detroit'ten toronto'ya uçak bileti al,B-fromloc.city_name B-toloc.city_name O O O,flight
+toronto'dan milwaukee'ye uçak bileti ara,B-fromloc.city_name B-toloc.city_name O O O,flight
+çarşamba günü oakland'dan salt lake city'e son uçuş veya perşembe günü oakland'den salt lake city'e ilk uçuş,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-flight_mod O B-or B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-flight_mod O,flight
+perşembe günü oakland'dan salt lake city'e ilk uçuşunu gerçekleştir,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-flight_mod O O,flight
+çarşamba günü oakland'dan salt lake city'e son uçağa binin,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-flight_mod O O,flight
+oakland'dan salt lake city'e geçen çarşamba uçuşunu listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-flight_mod B-depart_date.day_name O O,flight
+toronto'dan san diego'ya uçmak dtw'de durmak,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-stoploc.airport_code O,flight
+st petersburg ve charlotte arasında uçuşlar,B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O,flight
+milwaukee'den indianapolis'e pazartesi sabah 9'dan önce kalkan bir uçağa ihtiyacım var,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.time B-depart_time.time B-depart_time.time_relative O O O O O,flight
+pazartesi sabah 8'den önce milwaukee'den indianapolis'e kalkan bir uçağa ihtiyacım var,B-depart_date.day_name B-depart_time.time B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name O O O O O,flight
+indianapolis havaalanında kara ulaşımı var mı,B-airport_name I-airport_name O O O O,ground_service
+indianapolis cleveland arası salı öğlen kalkan bir uçuş için uçuş bilgilerine ihtiyacım var,B-fromloc.city_name B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day O O O O O O O O,flight
+cleveland'dan milwaukee çarşamba günü saat 1800'den sonra kalkan bir uçuş için uçuş bilgilerine ihtiyacım var,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name I-depart_date.day_name O B-depart_time.time B-depart_time.time_relative O O O O O O O O,flight
+çarşamba günü saat 1700'den sonra milwaukee'ye dönen cleveland'dan kalkan uçuşlar için uçuş bilgilerine ihtiyacım var,B-depart_date.day_name I-depart_date.day_name O B-depart_time.time B-depart_time.time_relative B-toloc.city_name O B-fromloc.city_name O O O O O O O,flight
+çarşamba günü saat 1700'den sonra cleveland'dan milwaukee'ye kalkan uçuşlar için uçuş bilgilerine ihtiyacım var,B-depart_date.day_name I-depart_date.day_name O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name O O O O O O O,flight
+çarşamba günü saat 1700'den sonra cleveland'dan milwaukee'ye kalkan uçuşlar için uçuş bilgilerine ihtiyacım var,B-depart_date.day_name I-depart_date.day_name O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name O O O O O O O,flight
+pazartesi günü denver'dan salt lake city'ye bir uçuşa ihtiyacım var,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O,flight
+denver havaalanında kara taşımacılığı var mı,B-airport_name I-airport_name O O O O,ground_service
+pazartesi günü saat 1700'den sonra kalkan denver'dan salt lake city'ye bir uçuş için uçuş ve havayolu bilgilerine ihtiyacım var,B-depart_date.day_name I-depart_date.day_name O B-depart_time.time B-depart_time.time_relative O B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O O O O,flight+airline
+salt lake city havaalanında kara ulaşımı var mı,B-airport_name I-airport_name I-airport_name I-airport_name O O O O,ground_service
+salt lake city'den phoenix'e çarşamba saat 1700'den sonra kalkan bir uçağa ihtiyacım var,B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_name O B-depart_time.time B-depart_time.time_relative O O O O O,flight
+phoenix havaalanında kara ulaşımı var mı,B-airport_name I-airport_name O O O O,ground_service
+çarşamba günü saat 1800'den sonra oakland'dan salt lake city'ye bir uçağa ihtiyacım var,B-depart_date.day_name I-depart_date.day_name O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O,flight
+oakland'dan salt lake city'e giden perşembe sabah 9'dan önce hareket eden uçuş ve ücret bilgilerine ihtiyacım var,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O B-depart_date.day_name B-depart_time.time B-depart_time.time B-depart_time.time_relative O O O O O O O O,flight+airfare
+perşembe günü saat 8'den önce oakland'dan salt lake city'e hareket eden uçuş ve ücret bilgilerine ihtiyacım var,B-depart_date.day_name O O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O O O,flight+airfare
+perşembe günü saat 8'den önce oakland'dan salt lake city'e kalkan uçuşlar için uçuş numaralarına ve havayollarına ihtiyacım var,B-depart_date.day_name O O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O O O O,flight_no+airline
+perşembe sabah 8'den önce oakland'dan salt lake city'e giden uçuşlar için uçuş numaralarına ihtiyacım var,B-depart_date.day_name B-depart_time.time B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O O,flight_no
+arizona nevada ve california'daki havaalanlarını listeleyin lütfen,B-state_name I-state_name O B-state_name O O O,airport
+california nevada arizona havaalanları listesi,B-state_name B-state_name B-state_name O O,airport
+arizona havaalanını listele,B-state_name O O,airport
+california havaalanlarını listele,B-state_name O O,airport
+las vegas'tan phoenix'e uçuşları listele,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+california havaalanlarını listele,B-state_name O O,airport
+havaalanlarını listele,O O,airport
+oakland'dan salt lake city'e çarşamba gecesi uçuşlarını listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O O,flight
+perşembe sabahı saat 6'dan önce oakland'dan salt lake city'e uçuşları listele,B-depart_date.day_name B-depart_time.period_of_day O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O,flight
+hangi havayolları toronto ve san diego arasında uçuyor,O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O,airline
+lütfen st petersburg ve charlotte arasındaki öğleden sonra uçuşlarını listeleyin,O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_time.period_of_day I-depart_time.period_of_day O O,flight
+tpa nedir,B-airport_code O,abbreviation
+cleveland dallas uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name O O,flight
+lütfen sadece cleveland'dan dallas'a öğleden önce kalkan uçuşları listeleyin,O O B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day B-depart_time.time_relative O O O,flight
+öğleden önce cleveland'dan dallas'a ne tür bir uçak uçuyor,B-depart_time.period_of_day B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name O O O O O,aircraft
+indianapolis'ten seattle'a uçuşlar hakkında bilgiye ihtiyacım var,B-fromloc.city_name B-toloc.city_name O O O O O,flight
+memphis'ten seattle'a bir uçuşa ihtiyacım var,B-fromloc.city_name B-toloc.city_name O O O O,flight
+nashville'den seattle'a bir bilete ihtiyacım var,B-fromloc.city_name B-toloc.city_name O O O O,airfare
+nashville tennessee'den seattle'a bir bilete ihtiyacım var,B-fromloc.city_name B-fromloc.state_name B-toloc.city_name O O O O,airfare
+milwaukee'den tampa'ya uçuş bilgilerine ihtiyacım var,B-fromloc.city_name B-toloc.city_name O O O O,flight
+tampa'da araba kiralamam gerekiyor,B-city_name B-transport_type O O,ground_service
+st louis'den milwaukee'ye günlük bir uçuşa ihtiyacım var,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-flight_days O O O O,flight
+oakland'dan kalkan ve salt lake city'e varan uçuşlara ihtiyacım var,B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O,flight
+toronto san diego uçuşları hakkında bilgiye ihtiyacım var,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O O,flight
+toronto san diego uçuşları hakkında bilgiye ihtiyacım var,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O O,flight
+toronto'dan san diego'ya bir uçuş istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+st petersburg ve charlotte arasındaki uçuşlar hakkında bilgiye ihtiyacım var,B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O,flight
+cleveland'dan kalkan ve dallas'a varan uçuşların uçuş numaralarına ihtiyacım var,B-fromloc.city_name O O B-toloc.city_name O O O O O O,flight_no
+hangi uçuşlar new york'tan miami'ye ve geri dönüyor,O O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+ücret kodu qo ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+milwaukee'den orlando'ya tek yön uçuşları göster,B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O,flight
+us kısaltmamız ne anlama geliyor,B-airline_code O O O O,abbreviation
+milwaukee'den orlando'ya çarşamba akşamı veya perşembe sabahı tek yön bir bilet istiyorum,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day B-or B-depart_date.day_name B-depart_time.period_of_day B-round_trip I-round_trip O O O,airfare
+milwaukee orlando arası uçuşları göster,B-fromloc.city_name B-toloc.city_name O O O,flight
+ücret kodu f ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+ücret kodu h ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+ücret kodu y ne anlama geliyor,O O B-fare_basis_code O O B-fare_basis_code,abbreviation
+kısıtlamalar nelerdir ap 57,O O B-restriction_code I-restriction_code,abbreviation
+lütfen bana indianapolis'ten memphis'e sabah 10'dan önce tek yön olan birinci sınıf uçuşları göster,O O B-fromloc.city_name B-toloc.city_name B-depart_time.time B-depart_time.time B-depart_time.time_relative B-round_trip I-round_trip O B-class_type I-class_type O O,flight
+şimdi bana burbank'tan seattle'a seattle'da saat 1900'dan önce varan tüm gidiş dönüş uçuşları göster,O O B-fromloc.city_name B-toloc.city_name B-toloc.city_name O B-arrive_time.time B-arrive_time.time_relative O O B-round_trip I-round_trip O O,flight
+orlando'dan montreal'e gidiş dönüş uçuşlar lütfen,B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O,flight
+hangi havayolu dl,O O B-airline_code,airline
+montreal orlando arasındaki tüm delta havayolları uçuşlarını göster,B-fromloc.city_name B-toloc.city_name O O B-airline_name I-airline_name O O,flight
+bana orlando'dan montreal'e tüm uçuşları göster lütfen,O B-fromloc.city_name B-toloc.city_name O O O O,flight
+hangi havayolu kw,O O B-airline_code,airline
+lütfen new york'tan miami'ye tüm uçuşları herhangi bir sınıf türünü listeleyin,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O O O O,flight
+ücret kodu bh ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+bana miami'den jfk'ye bir dönüş uçuşu göster lütfen,O B-fromloc.city_name B-toloc.airport_code O B-round_trip O O O,flight
+ücret kodu bh ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+ücret kodu bh ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+ücret kodu bh ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+ücret kodu bh ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+çarşamba günü saat 1800'den sonra milwaukee'den orlando'ya tek yön uçuşları göster,B-depart_date.day_name I-depart_date.day_name O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O,flight
+bana indianapolis'ten memphis'e uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O,flight
+bana burbank'tan seattle'a gidiş dönüş uçuşları göster,O B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O,flight
+bana orlando'dan montreal'e gidiş dönüş uçuşları göster,O B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O,flight
+montreal'den orlando'ya aktarmasız uçuşları göster,B-fromloc.city_name B-toloc.city_name B-flight_stop O O,flight
+montreal ve orlando arasındaki gidiş dönüş gezilerini göster,B-fromloc.city_name O B-toloc.city_name O B-round_trip I-round_trip O O,flight
+montreal'den orlando'ya gidiş dönüş uçuşları göster,B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O,flight
+bana montreal'den orlando'ya en ucuz tek yön uçuşları göster,O B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O,flight
+bana orlando'dan montreal'e en ucuz tek yön uçuşları göster,O B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O,flight
+miami'den new york'a en ucuz ekonomik uçuşları göster,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-cost_relative I-cost_relative B-economy O O,flight
+kansas şehrinden las vegas ekonomisine,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-economy,flight
+kansas şehrinden las vegas ekonomisine,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-economy,flight
+hp hangi havayolu,B-airline_code O O,airline
+las vegas'ta kara taşımacılığı,B-city_name I-city_name O O,ground_service
+las vegas için kara taşımacılığı,B-city_name I-city_name O O O,ground_service
+las vegas'tan baltimore ekonomisine,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-economy,flight
+las vegas'tan baltimore ekonomisine,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-economy,flight
+baltimore kansas city'e ekonomi,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-economy,flight
+hangi havayolu us,O O B-airline_code,airline
+hangi havayolu us,O O B-airline_code,airline
+hangi havayolu us,O O B-airline_code,airline
+hangi havayolu us,O O B-airline_code,airline
+hangi havayolu us,O O B-airline_code,airline
+kolomb'dan chicago'ya 1000'dan önce tek yön,B-fromloc.city_name B-toloc.city_name B-depart_time.time B-depart_time.time_relative B-round_trip I-round_trip,flight
+hp hangi havayolu,B-airline_code O O,airline
+st petersburg'dan detroit'e,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name,flight
+milwaukee'den orlando'ya çarşamba 1700'den sonra tek yön,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.time B-depart_time.time_relative B-round_trip I-round_trip,flight
+ve milwaukee'den atlanta'ya her gün sabah 10'dan önce,O B-fromloc.city_name B-toloc.city_name B-flight_days I-flight_days B-depart_time.time B-depart_time.time B-depart_time.time_relative,flight
+yx hangi havayolu,B-airline_code O O,airline
+bana san jose phoenix arasındaki tüm uçuşları göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O,flight
+bana san jose phoenix arasındaki tüm uçuşları göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O,flight
+hp hangi havayolu,B-airline_code O O,airline
+bana phoenix'te kara ulaşımını göster,O B-city_name O O O,ground_service
+phoenix'ten fortworth'a uçuşları göster,B-fromloc.city_name B-toloc.city_name O O,flight
+fort worth kara ulaşımını göster,B-city_name I-city_name O O O,ground_service
+fortworth san jose arası uçuşları göster,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+bana new york'tan miami'ye gidiş dönüş birinci sınıf uçuşları göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip B-class_type I-class_type O O,flight
+bana new york'tan miami'ye gidiş dönüş birinci sınıf uçuşları göster,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip B-class_type I-class_type O O,flight
+new york'tan miami'ye aktarmasız tüm gidiş dönüş uçuşları göster,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-flight_stop O B-round_trip I-round_trip O O,flight
+miami'den new york'a aktarmasız tüm gidiş dönüş uçuşları göster,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_stop O B-round_trip I-round_trip O O,flight
+bana herhangi bir gün sabah 10'dan önce indianapolis'ten memphis'e tek yön uçuşları göster,O O O O B-depart_time.time B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O,flight
+ücret kodu f ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+bana burbank'tan tacoma'ya gidiş dönüş uçuşları göster,O B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O,flight
+ap58 kısıtlaması ne anlama geliyor,B-restriction_code O O O O,abbreviation
+ücret kodu h ne anlama geliyor,O O B-fare_basis_code O O O,abbreviation
+hangi havayolu as,O O B-airline_code,airline
+hangi havayolu as,O O B-airline_code,airline
+hangi havayolu as,O O B-airline_code,airline
+hangi havayolu sam gibi,O O O B-airline_code,airline
+st petersburg'dan toronto'ya aktarmasız uçuşları göster,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-flight_stop O O,flight
+bana toronto'dan st petersburg'ye aktarmasız uçuşları göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_stop O O,flight
+bana toronto'dan st petersburg'ye aktarmasız uçuşları ve ücretleri göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_stop O O O O,flight+airfare
+bana toronto'dan st petersburg'ye aktarmasız uçuşları göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_stop O O,flight
+milwaukee'den orlando'ya hafta içi uçuşları göster tek yön,B-fromloc.city_name B-toloc.city_name B-flight_mod I-flight_mod O O B-round_trip I-round_trip,flight
+milwaukee'den orlando'ya hafta içi uçuşları göster tek yön,B-fromloc.city_name B-toloc.city_name B-flight_mod I-flight_mod O O B-round_trip I-round_trip,flight
+hp hangi havayolu,B-airline_code O O,airline
+chicago'dan san diego'ya uçuşları listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+chicago'dan san diego'ya uçuşları listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+kansas city'den denver'a uçuşları listele,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+denver'dan phoenix'e uçuşları listele,B-fromloc.city_name B-toloc.city_name O O,flight
+phoenix'den las vegas'a uçuşları listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+las vegas'tan san diego'ya uçuşları listele,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+sabahları chicago'dan kansas şehrine uçuşları listele,B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+houston'dan san jose'a uçuşları listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+houston'dan milwaukee'ye uçuşları listele,B-fromloc.city_name B-toloc.city_name O O,flight
+milwaukee'den çarşamba günü san jose'a uçuşları listele,B-fromloc.city_name B-depart_date.day_name I-depart_date.day_name B-toloc.city_name I-toloc.city_name O O,flight
+cuma günü san jose dallas uçuşlarını listele,B-depart_date.day_name O B-fromloc.city_name B-fromloc.city_name B-toloc.city_name O O,flight
+dallas'tan houston'a uçak bileti ara,B-fromloc.city_name B-toloc.city_name O O O,flight
+new york'ta havaalanlarından şehir merkezine uzaklığı listele,B-city_name I-city_name O O O O O,distance
+new york'taki havaalanlarını listele,B-city_name I-city_name O O,airport
+new york'taki havaalanlarını listele,B-city_name I-city_name O O,airport
+la'daki havaalanlarını listele,B-city_name B-city_name O,airport
+havaalanlarını listele,O O,airport
+la'daki havaalanlarını listele,B-city_name B-city_name O,airport
+la'daki havaalanlarını listele,B-city_name B-city_name O,airport
+la'daki havaalanlarını listele,B-city_name B-city_name O,airport
+liste la,O B-city_name,city
+liste la,O B-city_name,city
+new york'tan la'ya uçuşları listele,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-toloc.city_name O,flight
+la guardia'dan burbank'a uçuşları listele,B-fromloc.airport_name I-fromloc.airport_name B-toloc.city_name O O,flight
+la'dan orlando'ya uçuşları listele,B-fromloc.city_name B-toloc.city_name B-fromloc.city_name O,flight
+ontario california'dan orlando'ya uçuşları listele,B-fromloc.city_name B-fromloc.state_name B-toloc.city_name O O,flight
+ontario california'dan orlando'ya uçuşları listele,B-fromloc.city_name B-fromloc.state_name B-toloc.city_name O O,flight
+pazartesi günleri indianapolis'ten memphis'e uçuşları listele,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O,flight
+pazartesi günü indianapolis'ten memphis'e uçuşları listele,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O,flight
+çarşamba günü memphis'ten miami'ye uçuşları listele,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O,flight
+pazar günü miami'den indianapolis'e uçuşları listele,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O,flight
+cumartesi öğleden sonra charlotte'tan uçuşları listele,B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name O O,flight
+charlotte'tan tüm uçuşlar için uçak tipini listele,B-fromloc.city_name O O O O O O,aircraft
+tacoma'dan orlando'ya cumartesiden ayrılan bir sonraki cumartesiye giden gidiş dönüş uçuşlarını ve ücretlerini listeleyin,B-fromloc.city_name B-toloc.city_name B-return_date.day_name O O B-return_date.date_relative B-return_date.day_name O B-round_trip I-round_trip O O O O,flight+airfare
+ücret kodu q hangi sınıftır,O O B-booking_class O O,abbreviation
+cumartesi günü orlando'dan tacoma'ya uçuşları listeleyin ücret bazında q kodu,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O O O B-fare_basis_code O,flight
+detroit'ten st petersburg'ye birinci sınıf gidiş dönüş uçak biletlerini listeleyin,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-class_type I-class_type B-round_trip I-round_trip O O O,airfare
+detroit'ten st petersburg'ye en ucuz gidiş dönüş uçak bileti listesi,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-class_type I-class_type B-round_trip I-round_trip O O O,airfare
+pazartesi sabahı pittsburgh'dan newark'a uçuşları listele,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O,flight
+cuma günü minneapolis'ten pittsburgh'a uçuşları listele,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O,flight
+cincinnati'den tampa'ya sabah 9'dan önceki uçuşları listele,B-fromloc.city_name B-toloc.city_name B-depart_time.time B-depart_time.time B-depart_time.time_relative O O,flight
+cincinnati'den tampa'ya öğleden önce uçuşları listele,B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day B-depart_time.time_relative O O,flight
+tampa'dan cincinnati'ye saat 3'ten sonra uçuşları listele,B-fromloc.city_name B-toloc.city_name B-depart_time.time B-depart_time.time B-depart_time.time_relative O O,flight
+seattle'dan salt lake city'e uçan havayollarını listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O,airline
+seattle'dan salt lake city'e delta uçuşlarını listele,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-airline_name O O,flight
+seattle'dan salt lake city'e yapılan delta uçuşlarının koltuk kapasitelerini listeleyin,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O B-airline_name O O O O,capacity
+uçak tipi ile seattle'dan salt lake city'e delta uçuşlarını listele,O O O B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-airline_name O O,flight
+baltimore'da hangi kara taşımacılığı var,B-city_name O O O O,ground_service
+baltimore'da kara taşımacılığını listele,B-city_name O O O,ground_service
+cuma günü baltimore'dan san francisco'ya uçuşları listele,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+bana salı günü los angeles'tan pittsburgh'a uçuşları ver,O B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+perşembe akşamı pittsburgh'dan los angeles'a uçuşları ver,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+gelecek çarşamba cleveland'dan miami'ye gidiş dönüş uçak biletini ver,B-depart_date.date_relative B-depart_date.day_name B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O O,flight
+gelecek çarşamba cleveland'dan miami'ye gidiş dönüş uçuşların ücretlerini ver,B-depart_date.date_relative B-depart_date.day_name B-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O O,airfare
+bana çarşamba günü miami'den cleveland'a seyahat için uçuşları ve ücretleri ver,O B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O O O O O,flight
+gelecek pazar miami'den cleveland'a bilet ücretini ver,B-depart_date.date_relative B-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O O,airfare
+amerikan havayollarında cumartesi veya pazar milwaukee'den anka kuşuna uçuşları ver,B-airline_name I-airline_name B-depart_date.day_name B-or B-depart_date.day_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+bana çarşamba akşamı phoenix'ten milwaukee'ye uçuşları ver,O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O,flight
+çarşamba günü amerikan havayollarında anka kuşundan milwaukee'ye uçuşları ver,B-depart_date.day_name I-depart_date.day_name B-airline_name I-airline_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+bana amerikan havayollarında anka kuşundan milwaukee'ye uçuşları ver,O B-airline_name I-airline_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+bana phoenix'ten milwaukee'ye uçuşları ver,O B-fromloc.city_name B-toloc.city_name O O,flight
+cumartesi sabahı erken saatlerde chicago'dan seattle'a aktarmasız kalkan yemek uçuşlarını ver,B-depart_date.day_name B-depart_time.period_of_day B-depart_time.period_mod O B-fromloc.city_name B-toloc.city_name B-flight_stop O B-meal O O,flight
+bana chicago'dan seattle'a cumartesi sabahı yemekli uçuşları ver,O B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day B-meal O O,flight
+bana seattle'dan chicago'ya kıtada yemekli uçuşlar ver,O B-fromloc.city_name B-toloc.city_name B-airline_name B-meal O O,flight
+bana kıtalararası cumartesi sabahı yemekli seattle'dan chicago'ya uçuşları ver,O B-airline_name B-depart_date.day_name B-depart_time.period_of_day B-meal B-fromloc.city_name B-toloc.city_name O O,flight
+bana cumartesi sabahı erken saatlerde yemekli kıtada chicago'dan seattle'a uçuşları ver,O B-depart_date.day_name B-depart_time.period_of_day B-depart_time.period_mod O B-meal B-airline_name B-fromloc.city_name B-toloc.city_name O O,flight
+bana cumartesi sabahı erken saatlerde yemekli chicago'dan seattle'a kıtasal uçuşların bir kombinasyonunu ver,O B-depart_date.day_name B-depart_time.period_of_day B-depart_time.period_mod O B-meal B-fromloc.city_name B-toloc.city_name B-airline_name O O O O,flight
+bana chicago'dan minneapolis'e yemekli cumartesi sabahı uçuşlarını ver,O B-fromloc.city_name B-toloc.city_name B-meal B-depart_date.day_name B-depart_time.period_of_day O O,flight
+bana chicago'dan minneapolis'e yemekli kıtada cumartesi sabahı uçuşlarını ver,O B-fromloc.city_name B-toloc.city_name B-meal B-airline_name B-depart_date.day_name B-depart_time.period_of_day O O,flight
+bana cumartesi sabahı chicago'dan st paul yemekli kıtasal,O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-meal B-airline_name,flight
+bana new york'tan las vegas'a aktarmasız uçuşları ver,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_stop O O,flight
+bana memphis'ten las vegas'a aktarmasız uçuşları ver,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-flight_stop O O,flight
+bana yirmi beş aralık civarında indianapolis'ten orlando'ya en ucuz gidiş dönüş uçak biletini ver,O B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O O O,flight
+newark'tan tampa'ya bir cuma uçuşuna ihtiyacım var,B-fromloc.city_name B-toloc.city_name O B-depart_date.day_name O O O,flight
+tampa'dan charlotte'a bir pazar uçuşuna ihtiyacım var,B-fromloc.city_name B-toloc.city_name O B-depart_date.day_name O O O,flight
+bana salı sabahı charlotte'tan baltimore'a bir uçuş ayarla,O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O O,flight
+baltimore'dan newark'a bir sabah uçuşu alabilir miyim lütfen,B-fromloc.city_name B-toloc.city_name O B-depart_time.period_of_day O O O O,flight
+yirmi beş aralık indianapolis orlando en ucuz gidiş dönüş bileti,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O,airfare
+yirmi yedinci aralık indianapolis orlando en ucuz tek yön,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip,airfare
+dallas houston uçuş numarası,B-fromloc.city_name B-toloc.city_name O O,flight_no
+houston dallas uçuş numarası,B-fromloc.city_name B-toloc.city_name O O,flight_no
+amerikan havayollarında milwaukee'den anka kuşuna cumartesi uçuşu,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name O,flight
+phoenix'den milwaukee'ye amerikan havayollarında uçuş numaraları,B-fromloc.city_name B-toloc.city_name B-airline_name I-airline_name O O,flight_no
+chicago seattle uçuş numaraları,B-fromloc.city_name B-toloc.city_name O O,flight_no
+chicago'dan seattle'a kıtalararası uçuş numaraları,B-fromloc.city_name B-toloc.city_name B-airline_name O O,flight_no
+kıtalararası seattle'dan chicago'ya uçuş numaraları,B-airline_name B-fromloc.city_name B-toloc.city_name O O,flight_no
+pittsburgh'dan cleveland'a 200 doların altında bir ücret var mı,B-fromloc.city_name B-toloc.city_name B-fare_amount I-fare_amount B-cost_relative O O O O,airfare
+pittsburgh atlanta en ucuz uçak bileti ne kadar,B-fromloc.city_name B-toloc.city_name B-class_type I-class_type O O O O,airfare
+cuma günü tampa'ya newark,B-depart_date.day_name O B-toloc.city_name B-fromloc.city_name,flight
+tampa'dan charlotte pazar sabahına,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day,flight
+salı günü charlotte baltimore,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name,flight
+baltimore newark çarşamba sabahı,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day,flight
+dallas'tan houston'a saat 1201'den sonra,B-fromloc.city_name B-toloc.city_name B-depart_time.time I-depart_time.time B-depart_time.time_relative,flight
+houston'dan dallas'a gece yarısından önce,B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day I-depart_time.period_of_day B-depart_time.time_relative,flight
+indianapolis'ten orlando'ya yirmi yedinci aralık,B-fromloc.city_name B-toloc.city_name B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name,flight
+yirmi yedinci aralık indianapolis'ten orlando'ya en ucuz uçak bileti,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative O O,airfare
+yirmi yedinci aralıkta indianapolis'ten orlando'ya en ucuz gidiş dönüş yolculuk,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name B-cost_relative I-cost_relative B-round_trip I-round_trip O,airfare
+cleveland'dan miami'ye çarşamba günü 1600'dan önce varış,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name I-depart_date.day_name B-arrive_time.time B-arrive_time.time_relative O,flight
+miami'den cleveland'a pazar öğleden sonra,B-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day,flight
+pazar günü new york'tan las vegas'a ve memphis'ten las vegas'a,B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name,flight
+pazar günü new york'tan las vegas'a ve memphis'ten las vegas'a,B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name,flight
+pazar öğleden sonra new york'tan las vegas'a,B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name,flight
+memphis'ten las vegas'a pazar öğleden sonra,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day,flight
+pazar öğleden sonra new york'tan las vegas'a,B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name,flight
+cumartesi sabahı chicago'dan seattle'a,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name,flight
+cumartesi sabahı chicago'dan las vegas'a,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name,flight
+los angeles'tan pittsburgh'a salı öğleden sonra,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day,flight
+pazartesi öğleden sonra los angeles'tan pittsburgh'a,B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name B-toloc.city_name,flight
+pittsburgh'dan los angeles'a perşembe akşamı,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day,flight
+cumartesi günü milwaukee'den anka kuşuna,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name,flight
+anka kuşundan milwaukee'ye pazar günü,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_name O,flight
+çarşamba günü anka kuşundan milwaukee'ye,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name,flight
+baltimore'dan san francisco'ya 1700 ile 2000 arasında varan bir uçuş,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-arrive_time.start_time O B-arrive_time.end_time O O O B-flight,flight
+kaç kuzeybatı uçuşu st paul,O B-airline_name O B-fromloc.city_name I-fromloc.city_name,flight
+washington dc'den kaç kuzeybatı uçuşu kalkıyor,B-fromloc.city_name B-fromloc.state_code O B-airline_name O O,flight
+kuzeybatıda dulles'e bırakan kaç uçuş var,B-airline_name B-fromloc.airport_name O O O O,flight
+kuzeybatı hangi şehirlerden uçuyor,B-airline_name O O O,city
+kuzeybatının uçtuğu şehirleri listeleyin,B-airline_name O O O,city
+kuzeybatı hangi şehirlere uçuyor,B-airline_name O O O,city
+dallas'tan san francisco'ya saat 4'ten sonra kalkan bir aktarmalı uçuş istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_time.time I-depart_time.time B-depart_time.time_relative O O B-connect O O,flight
+lütfen dallas'tan san francisco'ya tüm uçuşları listeleyin,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+philadelphia'dan dallas'a amerikan havayollarının sabah uçuşlarını tekrar anlat,B-fromloc.city_name B-toloc.city_name B-airline_name I-airline_name B-depart_time.period_of_day O O O,flight
+philadelphia'dan ayrılan ve dallas'a giden uçuşları söyle,B-fromloc.city_name O O B-toloc.city_name O O O,flight
+d9s nedir,B-aircraft_code O,abbreviation
+d9s ne tür bir uçaktır,B-aircraft_code O O O O,aircraft
+d9s nedir,B-aircraft_code O,abbreviation
+bana kule havayolları tarafından hizmet verilen havaalanlarını göster,O B-airline_name I-airline_name O O O O O,airport
+bana jfk ve orlando arasındaki birinci sınıf ve en ucuz uçuşlarını göster,O B-fromloc.airport_code O B-toloc.city_name O B-class_type I-class_type O B-class_type I-class_type O O,flight
+bana kennedy havaalanından miami'ye birinci sınıf ve en ucuz uçuşlarını göster,O B-fromloc.airport_name I-fromloc.airport_name B-toloc.city_name B-class_type I-class_type O B-class_type I-class_type O O,flight
+bana jfk'den miami'ye birinci sınıf ve en ucuz uçuşlarını göster,O B-fromloc.airport_code B-toloc.city_name B-class_type I-class_type O B-class_type I-class_type O O,flight
+yemekler hiç kule havasında servis ediliyor mu,B-meal O B-airline_name I-airline_name O O O,meal
+aperatifler kule havasında servis edilir mi,B-meal_description B-airline_name I-airline_name O O O,meal
+delta havayollarının jfk'den miami'ye uçuşlarını göster,B-airline_name I-airline_name B-fromloc.airport_code B-toloc.city_name O O,flight
+boston'dan tuz gölüne delta havayollarını göster,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-airline_name I-airline_name O,flight
+delta havayollarının boston'dan tuz gölüne uçuşlarını göster,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+delta havayollarının boston'dan salt lake city'e uçuşlarını göster,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O,flight
+boston ve washington dc arasındaki uçuşlar için ücretler ne kadar,B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O O O O O O,airfare
+boston'dan salt lake city'e en ucuz uçak bileti ne kadar,B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-cost_relative I-cost_relative O O O O,airfare
+washington dc'den salt lake city'e en ucuz uçak bileti fiyatları,B-fromloc.city_name B-fromloc.state_code B-toloc.city_name I-toloc.city_name I-toloc.city_name B-cost_relative I-cost_relative O O O,airfare
+bwi'den salt lake city'e en düşük ücret nedir,B-fromloc.airport_code B-toloc.city_name I-toloc.city_name I-toloc.city_name B-cost_relative I-cost_relative O O,airfare
+bana detroit'ten las vegas'a ve geri dönüş için birinci sınıf bir biletin maliyetini göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-round_trip O O B-class_type I-class_type O O O O,airfare
+boston'dan washington dc'ye en erken gelen uçuş nedir,B-fromloc.city_name B-toloc.city_name B-toloc.state_code B-flight_mod I-flight_mod I-flight_mod O O,flight
+boston ve washington dc arasındaki en erken gelen uçuş nedir,B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-flight_mod I-flight_mod I-flight_mod O O,flight
+boston ve washington dc arasındaki en erken gelen uçuş nedir,B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-flight_mod I-flight_mod I-flight_mod O O,flight
+houston'dan orlando'ya en erken gelen uçuş nedir,B-fromloc.city_name B-toloc.city_name B-flight_mod I-flight_mod I-flight_mod O O,flight
+houston'dan orlando'ya en erken gelen uçuş nedir,B-fromloc.city_name B-toloc.city_name B-flight_mod I-flight_mod I-flight_mod O O,flight
+bana houston ve orlando arasındaki uçuşları göster,O B-fromloc.city_name O B-toloc.city_name O O O,flight
+bana houston ve orlando arasındaki uçuşları göster,O B-fromloc.city_name O B-toloc.city_name O O O,flight
+bana houston orlando arası uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O O,flight
+denver'dan akşam 8 ile akşam 9 arasında kalkan tüm uçuşları listele,B-fromloc.city_name B-depart_time.start_time I-depart_time.start_time O B-depart_time.end_time I-depart_time.end_time O O O O O,flight
+733 uçağındaki oturma kapasitesi nedir,B-aircraft_code O O O O,capacity
+72'lerin oturma kapasitesi nedir,B-aircraft_code O O O,capacity
+72s uçağın oturma kapasitesi nedir,B-aircraft_code O O O O,capacity
+m80 uçağının oturma kapasitesi nedir,B-aircraft_code O O O O,capacity
+m80 tipi uçakların oturma kapasitesi nedir,B-aircraft_code O O O O O,capacity
+bir m80'in oturma kapasitesi nedir,O B-aircraft_code O O O,capacity
+hangi havayolları denver'a hizmet ediyor,O O B-city_name O O,airline
+denver'a uçuşları olan havayollarını listeleyin,B-city_name O O O O,airline
+hangi havayolları denver'a uçuyor,O O B-toloc.city_name O,airline
+denver'a 8 ile 9 pm arasında gelen tüm uçuşları listele,B-toloc.city_name B-arrive_time.start_time O B-arrive_time.end_time I-arrive_time.end_time O O O O O,flight
+73'lerin kapasitesi nedir,B-aircraft_code O O,capacity
+73s nedir,B-aircraft_code O,abbreviation
+uçak 73'lerde oturma kapasitesi nedir,O B-aircraft_code O O O,capacity
+757'nin oturma kapasitesi nedir,B-aircraft_code O O O,capacity
+757 kaç kişi alacak,B-aircraft_code O O O,capacity
+757'de kaç yolcu uçabilir,B-aircraft_code O O O,capacity
+denver'a 8 ile 9 pm arasında gelen tüm günlük uçuşları listeleyin,B-toloc.city_name B-arrive_time.start_time O B-arrive_time.end_time I-arrive_time.end_time O O O B-flight_days O O,flight
+akşam 8'den akşam 9'a kadar denver'a gelen tüm günlük uçuşların listesi,O B-arrive_time.start_time B-arrive_time.end_time I-arrive_time.end_time O B-toloc.city_name O O B-flight_days O O,flight
+bana denver'a 2000 ile 2100 saatleri arasında varan tüm günlük uçuşları göster,O B-toloc.city_name B-arrive_time.start_time O B-arrive_time.end_time O O O O B-flight_days O O,flight
+757'nin oturma kapasitesi nedir,B-aircraft_code O O O,capacity
+bana m80 uçağından bahset,O B-aircraft_code O O,aircraft
+bana m80 uçağından bahset,O B-aircraft_code O O,aircraft
+bana m80 denen uçak tipinden bahset,O B-aircraft_code O O O O,aircraft
+733'ün oturma kapasitesi nedir,B-aircraft_code O O O,capacity
+m80'in oturma kapasitesi nedir,B-aircraft_code O O O,capacity
+m80 uçağının oturma kapasitesi nedir,B-aircraft_code O O O O,capacity
+denver'a 8 ile 9 pm arasında gelen veya ayrılan tüm uçuşları listeleyin,B-city_name B-depart_time.start_time O B-depart_time.end_time I-depart_time.end_time O O O O O O O,flight
+denver'a 8 ile 9 pm arasında gelen tüm uçuşları listele,B-toloc.city_name B-arrive_time.start_time O B-arrive_time.end_time I-arrive_time.end_time O O O O O,flight
+denver'a 8 ile 9 pm arasında gelen her tür uçaktaki tüm uçuşları listeleyin,B-toloc.city_name B-arrive_time.start_time O B-arrive_time.end_time I-arrive_time.end_time O O O O O O O O,flight
+lütfen pazartesi sabahı nashville'den memphis'e tüm uçuşları listeleyin,O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O O,flight
+lütfen pazartesi sabahı nashville'den memphis'e uçuşları listeleyin,O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O,flight
+sabah 842'ye varırsam memphis havaalanından şehre kara ulaşımı var mı,B-period_of_day O O B-airport_name I-airport_name O O O O O,ground_service
+lütfen pazartesi gecesi memphis'ten new york'a uçuşları listeleyin,O B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+cvg nedir,B-airport_code O,abbreviation
+la guardia havaalanından new york şehrine hangi karayolu ulaşımı mevcuttur,B-airport_name I-airport_name I-airport_name B-city_name I-city_name I-city_name O O O O,ground_service
+lga'dan new york şehrine kara ulaşımı var mı,B-airport_code B-city_name I-city_name I-city_name O O O O,ground_service
+lütfen lga'dan new york şehrine kara taşımacılığını listeleyin,O B-airport_code B-city_name I-city_name I-city_name O O O,ground_service
+lütfen ewr'den new york şehrine kara ulaşımını listeleyin,O B-airport_code B-city_name I-city_name I-city_name O O O,ground_service
+bana memphis'ten new york şehrine sabah uçuşlarını göster,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name B-depart_time.period_of_day O O,flight
+bana çarşamba günü saat 1700'den sonra new york city'den nashville'e giden uçuşları ver,O B-depart_date.day_name I-depart_date.day_name O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+bana nashville havaalanından kara ulaşımından bahset,O B-airport_name I-airport_name O O O,ground_service
+cincinnati'den charlotte'a öğleden sonra kalkan ve akşam 7'den önce varış yapan aktarmasız uçuşlar nelerdir,B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day B-depart_time.time_relative O O B-arrive_time.time B-arrive_time.time B-arrive_time.time_relative O O B-flight_stop O O,flight
+alaska havayollarının burbank'a kaç uçuşu var,B-airline_name I-airline_name B-toloc.city_name O O O,flight
+burbank'tan her yere alaska havayolu uçuşlarını listeleyin,B-fromloc.city_name O O B-airline_name I-airline_name O O,flight
+burbank'tan alaska havayolu uçuşlarını listele,B-fromloc.city_name B-airline_name I-airline_name O O,flight
+hangi havayolu gibi,O O B-airline_code,airline
+burbank'a gelen alaska havayolları uçuşlarını listeleyin,B-toloc.city_name O B-airline_name I-airline_name O O,flight
+alaska havayollarının burbank kalkışlı uçuşlarını listele,B-airline_name I-airline_name B-fromloc.city_name O O O,flight
+tüm alaska havayolları uçuşlarını listele,O B-airline_name I-airline_name O O,flight
+seattle'dan kalkan tüm uçuşları listele,B-fromloc.city_name O O O O,flight
+indianapolis'ten memphis'e öğleden önce kalkan uçuşları listele,B-fromloc.city_name B-toloc.city_name B-depart_time.period_of_day B-depart_time.time_relative O O O,flight
+charlotte'dan las vegas'a en ucuz uçak bileti fiyatları,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-cost_relative I-cost_relative O O O,airfare
+sabah erkenden los angeles'tan charlotte'a bir uçuş istiyorum,B-depart_time.period_of_day B-depart_time.period_mod B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+charlotte'tan newark'a bir sabah uçuşu istiyorum,B-fromloc.city_name B-toloc.city_name O B-depart_time.period_of_day O O,flight
+newark'tan los angeles'a bir sabah uçuşu istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-depart_time.period_of_day O O,flight
+newark'tan los angeles'a bir akşam uçuşu istiyorum,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-depart_time.period_of_day O O,flight
+montreal quebec'ten san diego california'ya pazar günü kalkan bir uçak istiyorum,B-fromloc.city_name B-fromloc.state_name B-toloc.city_name I-toloc.city_name B-toloc.state_name B-depart_date.day_name O O O O O,flight
+salı günü san diego'dan indianapolis indiana'ya kalkan ve öğleden sonra kalkan bir uçak istiyorum,B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name B-toloc.state_name B-toloc.state_name O O B-depart_time.period_of_day I-depart_time.period_of_day O O O O,flight
+perşembe sabahı indianapolis'ten toronto'ya gitmek istiyorum,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O,flight
+cuma sabahı toronto'dan montreal'e bir uçuş istiyorum,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name B-toloc.city_name O O O,flight
+amerikan'da cincinnati'den burbank'a bir uçuş istiyorum,B-airline_name B-fromloc.city_name B-toloc.city_name O O O,flight
+419'da kalkan amerikan uçuşu için ne tür bir uçak kullanılır,B-depart_time.time O B-airline_name O O O O O O O,aircraft
+önümüzdeki çarşamba günü kansas city'den chicago'ya giden ve ertesi gün dönen bir uçağa ihtiyacım var,B-depart_date.date_relative B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O B-return_date.date_relative I-return_date.date_relative O O O O O,flight
+long beach'den st louis'ye hangi uçuşlar gider,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+memphis las vegas uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+las vegas ontario uçuşları nelerdir,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+ontario'dan memphis'e uçuşlar nelerdir,B-fromloc.city_name B-toloc.city_name O O,flight
+las vegas havaalanında ne tür kara taşımacılığı var,B-airport_name I-airport_name I-airport_name O O O O O,ground_service
+ontario havaalanında taksi hizmeti var mı,B-airport_name I-airport_name B-transport_type I-transport_type O O,ground_service
+tampa milwaukee uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name O O,flight
+milwaukee seattle uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name O O,flight
+la guardia san jose united'daki uçuşları nelerdir,B-fromloc.airport_name I-fromloc.airport_name B-toloc.city_name I-toloc.city_name B-airline_name O O,flight
+pazartesi günleri charlotte kuzey carolina'dan phoenix arizona'ya seyahat eden uçuşlar nelerdir,B-depart_date.day_name O B-fromloc.city_name B-fromloc.state_name I-fromloc.state_name B-toloc.city_name B-toloc.state_name O O O O,flight
+phoenix arizona'dan st paul minnesota'ya salı günü olan uçuşlar nelerdir,B-fromloc.city_name B-fromloc.state_name B-toloc.city_name I-toloc.city_name B-toloc.state_name B-depart_date.day_name O O O O,flight
+perşembe günü st paul minnesota'dan st louis'e kalkan uçuşlar nelerdir,B-depart_date.day_name O B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+st louis'ten charlotte kuzey carolina'ya cuma günü ayrılan uçuşlar nelerdir,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-toloc.state_name I-toloc.state_name B-depart_date.day_name O O O O,flight
+boston'dan orlando'ya new york'ta duran uçuşlar nelerdir,B-fromloc.city_name B-toloc.city_name B-stoploc.city_name I-stoploc.city_name O O O,flight
+gelecek pazartesi burbank'tan milwaukee'ye bir sabah uçuşuna ihtiyacım var,B-depart_date.date_relative B-depart_date.day_name B-fromloc.city_name B-toloc.city_name O B-depart_time.period_of_day O O O,flight
+milwaukee'den st louis'ye pazartesi gecesi giden bir uçuşa ne dersiniz,B-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O O O O O,flight
+ve st louis'ten salı öğleden sonra ayrılan burbank'a,O B-fromloc.city_name I-fromloc.city_name B-depart_date.day_name B-depart_time.period_of_day I-depart_time.period_of_day O B-toloc.city_name,flight
+salı gecesi st louis'ten burbank'a kalkan bir uçağa ne dersiniz,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O O,flight
+cumartesi günü saat 1800'den önce varan tuz gölünden newark havaalanına bir uçağa ihtiyacım var,B-arrive_date.day_name O O B-arrive_time.time B-arrive_time.time_relative O B-fromloc.city_name I-fromloc.city_name B-toloc.airport_name I-toloc.airport_name O O O O,flight
+cumartesi günü saat 1800'den önce varan cincinnati'den newark havaalanına bir uçuş istiyorum,B-arrive_date.day_name O O B-arrive_time.time B-arrive_time.time_relative O B-fromloc.city_name B-toloc.airport_name I-toloc.airport_name O O O,flight
+amerikan havayollarında miami'den şikago'ya saat 1700 civarında varacak bir uçuşa ihtiyacım var,B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name O B-arrive_time.time B-arrive_time.time_relative O O O O O,flight
+memphis'ten tacoma'ya los angeles'tan geçen bir uçağa ihtiyacım var,B-fromloc.city_name B-toloc.city_name B-stoploc.city_name I-stoploc.city_name O O O O O,flight
+cincinnati ile san jose california arasındaki saat 1800'den sonra kalkan uçuşlar nelerdir,B-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-toloc.state_name O O B-depart_time.time B-depart_time.time_relative O O O,flight
+san jose ve houston texas arasındaki aktarmasız uçuşlar nelerdir,B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name B-toloc.state_name O B-flight_stop O O,flight
+houston ve memphis arasındaki aktarmasız uçuşlar nelerdir,B-fromloc.city_name O B-toloc.city_name O B-flight_stop O O,flight
+çarşamba memphis ve cincinnati arasındaki uçuşlar nelerdir,B-depart_date.day_name B-fromloc.city_name O B-toloc.city_name O O O,flight
+newark'tan nashville'e amerikan uçuşları nelerdir,B-fromloc.city_name B-toloc.city_name B-airline_name O O,flight
+ontario'dan westchester'a chicago'da duran uçuşlar,B-fromloc.city_name B-toloc.city_name B-stoploc.city_name O O,flight
+lütfen los angeles charlotte arası uçuşları listeleyin,O B-fromloc.city_name B-fromloc.city_name B-toloc.city_name O O O,flight
+lütfen charlotte ile newark arasındaki uçuşları listeleyin,O B-fromloc.city_name O B-toloc.city_name O O O,flight
+lütfen newark'tan los angeles'a uçuşları listeleyin,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+lütfen amerikan havayollarında cincinnati'den burbank'a uçuşları listeleyin,O B-airline_name I-airline_name B-fromloc.city_name B-toloc.city_name O O,flight
+lütfen bana on altı haziranda kansas city'den chicago'ya uçuşları verin,O O B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+lütfen bana on yedinci haziranda şikago'dan kansas şehrine uçuşları verin,O O B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+lütfen on altı haziranda kansas city'den chicago'ya tüm uçuşları listeleyin,O B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+lütfen on yedinci haziranda şikago'dan kansas şehrine tüm uçuşları listeleyin,O B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O,flight
+burbank'tan milwaukee'ye seyahat etmek istiyorum,B-fromloc.city_name B-toloc.city_name O O O,flight
+bana önümüzdeki cumartesi akşam 6'dan önce varmadan önce salt lake city'den new york'a bir uçak bulabilir misin,O B-depart_date.date_relative B-depart_date.day_name B-arrive_time.time I-arrive_time.time B-arrive_time.time_relative O B-arrive_time.time_relative B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O,flight
+bana cumartesi günü saat 18'den önce cincinnati'den new york'a başka bir uçuş bulabilir misin,O B-depart_date.day_name O O B-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O O,flight
+salt lake city'den new york'a önümüzdeki cumartesi saat 1800'den önce gelen tüm delta uçuşlarını listeleyebilir misin,B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name B-depart_date.date_relative B-depart_date.day_name O B-arrive_time.time B-arrive_time.time_relative O O B-airline_name O O O,flight
+miami'den chicago'ya amerikan havayolları ile saat 1700'de sularında varmak üzere uçmak istiyorum,B-fromloc.city_name B-toloc.city_name B-airline_name I-airline_name O O B-arrive_time.time B-arrive_time.time_relative O O O O,flight
+önümüzdeki çarşamba kansas city'den chicago'ya seyahat etmek istiyorum,B-depart_date.date_relative B-depart_date.day_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+yirmi altıncı mayıs çarşamba günü kansas city'den chicago'ya saat 1900'da varan bir gidiş dönüş uçak bileti istiyorum,B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O B-arrive_time.time O O B-round_trip I-round_trip O O O,flight
+evet memphis'ten tacoma'ya los angeles'ta duran bir uçuş bulmak istiyorum,O B-fromloc.city_name B-toloc.city_name B-stoploc.city_name I-stoploc.city_name O O O O O,flight
+pazartesi sabahı san diego'dan phoenix'e uçuş bul,B-depart_date.day_name B-depart_time.period_of_day B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O,flight
+pazartesi günü phoenix'den detroit'e uçuş bul,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name B-toloc.city_name O O,flight
+salı günü detroit'ten san diego'ya uçuş bul,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+pazartesi cincinnati'den san jose'ye uçuş bul,B-depart_date.day_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O O,flight
+çarşamba günü san jose houston arası uçuş bulun,B-depart_date.day_name I-depart_date.day_name B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O,flight
+cuma günü houston'dan memphis'e uçak bileti ara,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O O,flight
+pazar günü memphis cincinnati arası uçuş bulun,B-depart_date.day_name O B-fromloc.city_name B-toloc.city_name O O O,flight
+akşam 630 civarında newark nashville arası amerikan uçuşunu bulun,B-depart_time.time I-depart_time.time B-depart_time.time_relative B-fromloc.city_name B-toloc.city_name O B-airline_name O O,flight
+lütfen los angeles'tan tacoma washington'a san francisco'da 10 haziran 1993 için 300 doları geçmeyen bir mola ile gidiş dönüş bir uçuş bulun,O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-depart_date.day_number B-stoploc.city_name I-stoploc.city_name O B-depart_date.month_name B-depart_date.year O B-fare_amount I-fare_amount B-cost_relative O O O B-round_trip I-round_trip O O O,flight
+on haziranda burbank'tan tacoma'ya uçuş var mı,B-depart_date.day_number B-depart_date.month_name B-fromloc.city_name B-toloc.city_name O O O,flight
+lütfen ontario'dan westchester'a on yedinci mayıs'ta tek yönlü akşam yemeğiyle birlikte chicago'da mola veren bir uçuş bulun,O B-fromloc.city_name B-toloc.city_name B-depart_date.day_number I-depart_date.day_number B-depart_date.month_name B-round_trip I-round_trip B-meal_description I-meal_description O B-stoploc.city_name O O O O O,flight
+burbank'tan milwaukee'ye bir uçuş rezervasyonu yapmak gibi,B-fromloc.city_name B-toloc.city_name O O O O O,flight
+bana burbank milwaukee arasındaki tüm uçuşları göster,O B-fromloc.city_name B-toloc.city_name O O O O,flight
+milwaukee'den st louis'ye tüm uçuşları bul,B-fromloc.city_name B-city_name I-city_name O O O,flight
+şimdi bana tüm uçuşları göster st louis'ten burbank'a,O O O O O B-city_name I-city_name B-toloc.city_name,flight
+burbank'tan milwaukee milwaukee'den st louis'ye ve st louis'ten burbank'a uçan bir havayolu şirketi var mı,B-fromloc.city_name B-toloc.city_name B-fromloc.city_name B-toloc.city_name I-toloc.city_name O B-fromloc.city_name I-fromloc.city_name B-toloc.city_name O O O O O O,airline
+burbank'tan milwaukee'ye st louis'de duran tüm gidiş dönüş uçuşları bul bana,B-fromloc.city_name B-toloc.city_name B-stoploc.city_name I-stoploc.city_name O O B-round_trip I-round_trip O O O,flight
+westchester ilçesine iki uçuş rezervasyonu yapmak istiyorum,B-toloc.city_name I-toloc.city_name O O O O O,flight
+salt lake city'den westchester county'ye bir uçuş rezervasyonu yapmak istiyorum,B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name B-toloc.city_name I-toloc.city_name O O O O O,flight
+bana westchester ilçesine yakın tüm havaalanlarını söyle,O B-city_name I-city_name O O O O,airport
+önümüzdeki cumartesi için united airlines ile cincinnati'den new york city'e bir uçuş rezervasyonu yapmak istiyorum,B-depart_date.date_relative B-depart_date.day_name O B-airline_name I-airline_name O B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O,flight
+bana new york city bölgesindeki tüm havaalanlarını söyle,O B-city_name I-city_name I-city_name O O O O,airport
+lütfen cincinnati'den new york city bölgesindeki herhangi bir havaalanına önümüzdeki cumartesi saat 1800'den önce gelen tüm uçuşları bulun,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O B-arrive_date.date_relative B-arrive_date.day_name O B-arrive_time.time B-arrive_time.time_relative O O O O,flight
+bana cincinnati'den new york city bölgesindeki herhangi bir havaalanına bir uçuş bul,O B-fromloc.city_name B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O O,flight
+amerikan havayolları ile miami'den şikago'ya uçmak istiyorum,B-airline_name I-airline_name O B-fromloc.city_name B-toloc.city_name O O,flight
+kansas city'den chicago'ya gidiş dönüş uçak bileti rezervasyonu yapmak istiyorum,B-fromloc.city_name I-fromloc.city_name B-toloc.city_name B-round_trip I-round_trip O O O O O,flight
+bana memphis'ten tacoma'ya uçan bir uçuş bul,O B-fromloc.city_name B-toloc.city_name O O O O,flight
